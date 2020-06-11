@@ -1,0 +1,61 @@
+include ../mixins/_mixins
+
+header.header 
+	.container 
+		.row 
+
+			nav.main-nav 
+
+				a(href="#").logo.preloader.preloader--v
+					img.blazy.blazy--style(src="./" data-src="./images/main/icon/l_vertical.svg", alt="bravo market logo")
+
+				ul.main-menu 
+					li.main-menu__list.main-menu__list--active.preloader.preloader--v 
+						a(href="#").main-menu__link About Us
+					li.main-menu__list.preloader.preloader--v 
+						a(href="#").main-menu__link Contact us
+					li.main-menu__list.preloader.preloader--v 
+						a(href="#").main-menu__link Careers
+					li.main-menu__list.preloader.preloader--v 
+						a(href="#").main-menu__link Customer Service
+					li.main-menu__list.preloader.preloader--v 
+						a(href="#").main-menu__link Leaflet
+					li.main-menu__list.preloader.preloader--v 
+						a(href="#").main-menu__link Cards
+					li.main-menu__list.preloader.preloader--v 
+						a(href="#").main-menu__link CSR Activities
+
+			.store-place 
+				a(href="#").store-search.preloader.preloader--v
+					span.store-search__icon
+						+icon('loc', 'store-search__icon-svg')
+					span.store-search__text.store-search__text--mobile
+						span.store-search__descr Stores 
+					span.store-search__text
+						span.store-search__descr Find stores 
+						span.store-search__title Baku 
+				.lang.preloader.preloader--v 
+					.select-wrap
+						.select-wrap__text(data-select-wrap="s1" data-select-focus="false")
+							input.select-wrap__input(type="hidden", name="site-lang", value="az" data-select-input="s1") 
+							+icon('lang', 'select-wrap__icon-svg')
+							.select-wrap__selected(data-selected-item="s1" data-selected-focus="false") az 
+						.select-wrap__option(data-select-option="s1" data-select-option-opened="false")
+							span.select-wrap__option-item(data-select-option-items="az"  data-select-option-input="s1") az 	
+							span.select-wrap__option-item(data-select-option-items="en"  data-select-option-input="s1") en 	
+							span.select-wrap__option-item(data-select-option-items="ru"  data-select-option-input="s1") ru 	
+			
+				button.hamburger.preloader.preloader--v
+					span.hamburger__item
+					span.hamburger__item
+					span.hamburger__item
+
+
+
+
+
+
+
+
+
+

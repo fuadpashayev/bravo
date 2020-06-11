@@ -1,0 +1,16 @@
+section.pdf-booklet.prealoder-pdf
+	.container-fluid 
+		.row
+			.pdf-booklet__col 
+				.pdf-booklet-controls
+					button.preloader.preloader--v.pdf-booklet-controls__btn.pdf-booklet-controls__btn--prev(disabled) 
+						+icon('left_arr', 'pdf-booklet-controls__icon')
+					input.pdf-booklet-controls__current(value='1' type='hidden')
+					.pdf-total-list.pdf-total-list--mobile
+						.pdf-total-list__stats.preloader.preloader--v
+							span.pdf-total-list__number.pdf-total-list__active-mobile 0 
+							span.pdf-total-list__line / 
+							span.pdf-total-list__number.pdf-total-list__total-mobile 0
+					button.preloader.preloader--v.pdf-booklet-controls__btn.pdf-booklet-controls__btn--next 
+						+icon('right_arr', 'pdf-booklet-controls__icon')
+				canvas.pdf-booklet-view(data-pdf-src="./media/2.pdf")

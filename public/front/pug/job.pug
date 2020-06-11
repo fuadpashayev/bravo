@@ -1,0 +1,38 @@
+extends _template.pug
+block content 
+	include header/_header_careers
+	// main 
+	main.main
+		- var breadcrumbsFirst = 'Job Opportunities'
+		- var breadcrumbsSecond = 'Mass Recruitment'
+		- var breadcrumbs3 = 'Mağaza heyəti'
+		- var breadcrumbs4 = 'Baş satıcı'
+		//- - var thumbTitle = 'About Us'
+		section.breadcrumbs 
+			.container 
+				.row 
+					.breadcrumbs_col 
+						.breadcrumbs__nav 
+							a(href="#").breadcrumbs__item.preloader-overlay.preloader-overlay--vertical 
+								+icon('home', 'breadcrumbs__icon')
+							a(href="#").breadcrumbs__item.preloader-overlay.preloader-overlay--vertical 
+								+icon('arrow', 'breadcrumbs__icon breadcrumbs__icon--arrow')
+								= breadcrumbsFirst		
+							a(href="#").breadcrumbs__item.preloader-overlay.preloader-overlay--vertical 
+								+icon('arrow', 'breadcrumbs__icon breadcrumbs__icon--arrow')
+								= breadcrumbsSecond
+							a(href="#").breadcrumbs__item.preloader-overlay.preloader-overlay--vertical 
+								+icon('arrow', 'breadcrumbs__icon breadcrumbs__icon--arrow')
+								= breadcrumbs3		
+							span.breadcrumbs__item.breadcrumbs__item--inactive.preloader-overlay.preloader-overlay--vertical 
+								+icon('arrow', 'breadcrumbs__icon breadcrumbs__icon--arrow')
+								= breadcrumbs4	
+		section.inner-top-thumb.inner-top-thumb--white-bg.section--pb-inner
+			.container.container--full 
+				.row 
+					.container-inner 
+						.inner-top-thumb__box.preloader.preloader--v(style="background: url(./images/main/careers/1.jpg) no-repeat center/cover")
+							//- h1.inner-top-thumb__title 
+							//- 	= thumbTitle
+		include job/_job
+	include footer/_footer

@@ -1,0 +1,123 @@
+.preloader
+	position: relative!important
+	z-index: 11!important
+	background: lighten($light_grey, 1%)!important
+	overflow: hidden!important
+	border: none!important
+	fill: rgba($white, 0)!important
+	stroke: rgba($white, 0)!important
+	color: rgba($white, 0)!important
+	&::placeholder 
+		opacity: 0
+	&.preloader--o 
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 11
+			width: 100%
+			height: 100% 
+			background:  lighten($bg_body, 1%)
+	&.preloader--h 
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 11
+			width: 100%
+			height: 100% 
+			background: $white
+			+trs 
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 12
+			display: block
+			width: 100%
+			height: 20%
+			margin-top: -5%
+			transform: translateY(-500%) 
+			filter: blur(1px)
+			opacity: 0.5
+			background: linear-gradient(120deg, #fdfbfb 20%, #ebedee 80%)
+			animation: nextLineVertical 2s linear infinite
+			+trs 
+	&.preloader--v
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 11
+			width: 100%
+			height: 100% 
+			background: $white
+			+trs 
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 12
+			display: block
+			width: 60%
+			height: 100%
+			margin-top: 0
+			transform: translateY(-200%)
+			filter: blur(1px)
+			background: linear-gradient(120deg, #fdfbfb 20%, #ebedee 80%)
+			animation: nextLineHorizontal 2s linear infinite
+			+trs 
+
+.prealoder-pdf
+	position: relative
+	z-index: 1
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 11
+		width: 100%
+		height: 100% 
+		background: $bg_body
+		+trs 
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 12
+		display: block
+		width: 60%
+		height: 100%
+		margin-top: 0
+		transform: translateY(-200%)
+		filter: blur(1px)
+		background: linear-gradient(120deg, #fdfbfb 20%, #ebedee 80%)
+		animation: nextLineHorizontal 2s linear infinite
+		+trs 
+
+.preloader-after
+	&::after,
+	&::before
+		display: none
+	
+
+@keyframes nextLineVertical
+	0%
+		transform: translateY(-500%)
+	100% 
+		transform: translateY(500%)
+
+
+@keyframes nextLineHorizontal
+	0%
+		transform: translateX(-200%)
+	100% 
+		transform: translateX(200%)
+		

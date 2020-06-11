@@ -1,0 +1,277 @@
+@import "smart-grid"
+
+// Main setting's
+::placeholder
+	color: #666
+
+::selection
+	background-color: $acceptor_green
+	color: #fff
+
+html, body
+	height: 100%
+	// height: 9000px 
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $helvetica-cr
+	background: $bg_body
+	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+	
+	input[type="number"] 
+		-moz-appearance: textfield
+
+	input[type="number"]:hover,
+	input[type="number"]:focus 
+		-moz-appearance: number-input
+	
+	input, textarea
+			// border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: $acceptor_red
+			&:required:valid
+				border-color: $acceptor_green
+
+ul,li,h1,h2,h3,h4,h5,h6,p
+	margin: 0
+	padding: 0
+
+li
+	list-style-type: none
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none	
+
+.img-responsive	
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+			
+\::-webkit-scrollbar-button
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 6px
+  height: 0px
+
+\::-webkit-scrollbar-track
+  background-color: rgba($grey, 0.35)
+  box-shadow: 0px 0px 3px rgba($grey, 0.35) inner
+
+\::-webkit-scrollbar-thumb
+  -webkit-border-radius: 0
+  border-radius: 0
+  background-color: $acceptor_green
+  box-shadow: 0px 1px 1px $acceptor_green inset
+  background-image: url('https://yraaa.ru/_pu/24/59610063.png')
+  background-position: center
+  background-repeat: no-repeat
+
+\::-webkit-resizer
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 6px
+  height: 0px
+
+\::-webkit-scrollbar
+  width: 6px			
+  height: 6px		
+
+.container
+	+wrapper()
+	box-sizing: border-box
+	+xl-block()
+		padding-left: 10px 
+		padding-right: 10px 
+	+xl-block()	
+		&.container--full
+			padding-left: 0 
+			padding-right: 0
+	&.container--full
+    padding-left: 10px
+    padding-right: 10px
+
+.container-fluid 
+	+wrapper-full() 
+	box-sizing: border-box
+	+xl-block()
+		padding-left: 10px 
+		padding-right: 10px 
+		
+.section
+	+col()
+	+size(12)
+	margin-bottom: 30px 
+	text-align: center
+	
+.section--green
+	background: $acceptor_green
+
+.section--mb 
+	margin-bottom: 70px 
+	+xl-block()
+		margin-bottom: 35px 
+
+.section--pb 
+	padding-bottom: 70px 
+	+xl-block()
+		padding-bottom: 35px 
+
+.section--mb-inner
+	margin-bottom: 50px 
+	+xl-block()
+		margin-bottom: 35px 
+
+.section--pb-inner
+	padding-bottom: 50px 
+	+xl-block()
+		padding-bottom: 35px 
+
+.section--mb-last
+	margin-bottom: 100px 
+	+xl-block()
+		margin-bottom: 35px 
+
+.section--pb-last
+	padding-bottom: 100px 
+	+xl-block()
+		padding-bottom: 35px 
+
+.section--pt
+	padding-top: 50px 
+	+xl-block()
+		padding-top: 35px 
+
+.section--line
+	overflow: hidden
+	.section__title
+		position: relative
+		z-index: 1
+		display: inline-block
+		&:after 
+			content: ''
+			position: absolute
+			top: 50%
+			left: -100%
+			width: 100%
+			height: 0.5px
+			margin-top: -.25px 
+			margin-left: -43px  
+			background: rgba($data_color, .5)
+		&:before 
+			content: ''
+			position: absolute
+			top: 50%
+			right: -100%
+			width: 100%
+			height: 0.5px
+			margin-top: -.25px 
+			margin-right: -43px  
+			background: rgba($data_color, .5)
+
+.section--white-bg
+	background: $white 
+
+.section__title
+	+caption_high_cb 
+	color: $black_light1
+
+.section__descr 
+	+text_small_cr
+	color: $black_light1	
+
+.container-inner
+	+col()
+	+size(12)
+	padding-left: 0px
+	padding-right: 0px
+
+.row
+	+row-flex()
+	&.row--inner
+		margin-left: -20px
+		margin-right: -20px 
+		+xl-block()
+			margin-left: -10px 
+			margin-right: -10px 
+		
+.row--align-center 
+	display: flex
+	align-items: center
+
+.body-wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100%
+	overflow: hidden
+	&.body-wrapper--full-height 
+		min-height: 100% 
+		height: 100% 
+		.main 
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			height: calc(100% - 95px)
+			min-height: calc(100% - 95px)
+		.header 
+			height: 75px
+		.footer 
+			height: 10px
+	&.body-wrapper--sticky
+		+from(1210px)
+			overflow: initial
+	
+.body-modal-active
+	overflow: hidden
+	
+.hidden
+	display: none
+
+.img-center
+	display: block
+	margin: 0 auto
+
+.post-img
+	display: block
+	margin: 0 auto 
+	max-width: 100% 
+	&.post-img--full
+		width: 100%
+		margin-bottom: 30px
+
+.links-page__link
+	display: block
+	width: 100%
+	margin: 5px 
+	color: $acceptor_red
+	
+.printed-content
+	display: none
+
+
+// LAZY LOAD STYLES
+.blazy--style,
+.swiper-lazy
+	opacity: 0
+	background: none
+	// transform: scale(0)
+	transition: all 500ms
+
+.swiper-lazy-loaded,
+.b-loaded 
+	opacity: 1
+	// transform: scale(1)
+

@@ -1,0 +1,1004 @@
+.careers-info
+	background: $white 
+
+.careers-info__col 
+	+col()
+	+size(10)
+	+size-xs(12)
+	margin: 0 auto 
+	&.careers-info__col--text-center 
+		text-align: center
+
+.benefits-section 
+	position: relative
+	z-index: 1
+	+xl-block()
+		&::after
+			margin-top: 20px
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		z-index: -1
+		left: 0%
+		width: 100%
+		height: 2px
+		margin-top: -1px
+		opacity: .3
+		background: linear-gradient(180deg, #FFFFFF 0%, #A69E9E 3.38%), #A69E9E
+
+
+.careers-info__col-full
+	+col()
+	+size(12)
+	// margin: 0 auto 
+
+.careers-info__col-content
+	+col()
+	+size(7)
+	+size-lg(8.5)
+	+size-md(12)
+	margin: 0 auto 
+
+.careers-info__col-aside
+	+col()
+	+size(3)
+	+size-md(12)
+ 
+
+.careers-info__title
+	margin-bottom: 20px 
+	+caption_high_cb 
+	font-size: 40px 
+	color: $black_light1
+	&.careers-info__title--green
+		color: $acceptor_green
+	+xs-block()
+		font-size: 26px 
+
+.careers-info__sub-title
+	margin-bottom: 10px 
+	+caption_small_cb 
+	color: $black_light1
+	&.careers-info__sub-title--green 
+		display: table-cell
+		position: relative
+		z-index: 1
+		min-width: 187px 
+		height: 60px 
+		text-align: center
+		vertical-align: middle
+		color: $white 
+		background: url(../images/main/icon/careers.svg) no-repeat 0 0/contain 
+	&.careers-info__sub-title--green-big 
+		min-width: 246px 
+
+	
+.careers-info__bold-text 
+	+text_middle_b 
+	color: $black_light1
+	
+.careers-info__text 
+	margin-bottom: 30px 
+	+text_middle_r 
+	color: $black_light1 
+	&:last-of-type
+		margin-bottom: 0
+
+.careers-info__link
+	+text_middle_r 
+	color: $acceptor_green 
+	+trs 
+	&:hover 
+		color: $acceptor_blue
+
+
+.careers-news__col
+	+col()
+	+size(12)
+	padding-top: 70px 
+	padding-bottom: 70px 
+	
+.careers-news-box 
+	display: flex
+	width: 100%
+	+md-block()
+		flex-direction: column
+
+.careers-news-box__inner
+	display: flex
+	flex-grow: 1
+	&.careers-news-box__inner--width-full
+		width: 60%
+		flex-direction: column
+		+lg-block()
+			width: 65%
+		+md-block()
+			width: 100%
+
+	&.careers-news-box__inner--width-half
+		width: 40%
+		+lg-block()
+			width: 35%
+		+md-block()
+			width: 100%
+
+.careers-news-box__tile 
+	display: flex
+	+trs 
+	+md-block()
+		height: 286px
+	+sm-block()
+		height: 230px	
+	+xs-block()
+		height: auto 	
+		margin-bottom: 20px
+	&:hover 
+		.careers-news-box__descr
+			padding-bottom: 60px
+			+md-block()
+				padding-bottom: 40px
+	&.careers-news-box__tile--horizontal
+		flex-direction: row 
+		+xs-block()
+			flex-direction: column
+			&:last-child
+				flex-direction: column-reverse
+	&.careers-news-box__tile--vertical 
+		flex-direction: column 
+		+md-block()
+			flex-direction: row
+		+xs-block()
+			flex-direction: column
+
+.careers-news-box__img,
+.careers-news-box__descr
+	flex-basis: 50% 
+	+md-block()
+		flex-grow: 1
+
+.careers-news-box__img
+	overflow: hidden
+	+xs-block()
+		margin-bottom: -8px	
+	&.careers-news-box__img--horizontal
+		img 
+			max-width: 336px 
+			height: 100% 
+			object-fit: cover 
+			+lg-block()
+				max-width: 100% 
+			+md-block()
+				width: 100%
+			+xs-block()
+				// width: auto 
+
+	&.careers-news-box__img--vertical
+		+md-block()
+			width: 100%
+		img 
+			max-width: 442px 
+			height: 100% 
+			object-fit: cover 
+			+lg-block()
+				max-width: 100% 
+			+md-block()
+				width: 100%
+
+.careers-news-box__descr
+	position: relative
+	display: flex
+	flex-direction: column
+	padding: 30px 
+	box-sizing: border-box 
+	+trs 
+	+sm-block()
+		padding: 15px 
+	+xs-block()
+		flex-basis: unset 
+		flex-grow: unset 	
+
+.careers-news-box__title
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	height: 100% 
+	+caption_small_cb
+	color: $white 
+	+trs 
+
+
+.careers-news-box__sub-title
+	+text_high_cr 
+	color: $white 
+	+trs 
+
+.careers-news-box__arrow
+	position: absolute
+	z-index: 1 
+	+xs-block()
+		display: none
+	&.careers-news-box__arrow--left-bottom
+		bottom: 63px 
+		left: -23px
+		width: 0
+		height: 0
+		border: 0 solid transparent
+		border-top-width: 23px
+		border-bottom-width: 23px
+		border-right: 23px solid
+	&.careers-news-box__arrow--right-bottom
+		bottom: 63px 
+		right: -23px
+		width: 0
+		height: 0
+		border: 0 solid transparent
+		border-top-width: 23px
+		border-bottom-width: 23px
+		border-left: 23px solid
+	&.careers-news-box__arrow--left-top
+		top: -23px 
+		left: 63px
+		width: 0
+		height: 0
+		border: 0 solid transparent
+		border-right-width: 23px
+		border-left-width: 23px
+		border-bottom: 23px solid
+		+md-block()
+			top: unset 
+			left: -34px 
+			bottom: 63px 
+			transform: rotate(-90deg)
+
+
+.careers-news 
+	&.careers-news--bg-white
+		background: $white 
+
+.careers-news__col-half
+	+col()
+	+size(6)
+	+size-sm(8)
+	+size-xs(12)
+	+sm-block()
+		margin: 0 auto 
+		margin-bottom: 30px 
+	+xs-block()
+		padding-left: 10px 
+		padding-right: 10px 	
+	// padding-bottom: 30px 
+
+.careers-news-post 
+	display: flex
+	flex-direction: column
+	background: $white 
+	+bx_shadow_footer
+	+trs 
+	+md-block()
+		box-shadow: none 
+	&:hover 
+		+bx_shadow_cart_light
+		.careers-news-post__title
+			color: $acceptor_green
+		.careers-news-post__thumb
+			img 
+				transform: scale(1.05)
+
+
+.careers-news-post__thumb
+	width: 100%
+	height: 294px
+	overflow: hidden
+	&.careers-news-post__thumb--full 
+		height: 505px
+		+md-block()
+			height: auto 
+	&.careers-news-post__thumb--svg
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 197px 
+		background: $bg_body
+		img 
+			width: 110px
+			height: 110px 
+			object-fit: none 
+	img 
+		width: 100%
+		max-width: 100% 
+		height: 100% 
+		object-fit: cover 
+		+trs 
+
+.careers-news-post__content
+	padding: 30px 
+
+.careers-news-post__title
+	+caption_small_cb
+	color: $black_light2
+	+trs 
+
+.careers-news-post__descr 
+	+text_middle_r
+	color: $black_light2
+	+trs 
+
+.careers-news-post__menu 
+	margin-top: 10px 
+
+.careers-news-post__items
+	position: relative
+	padding-left: 20px 
+	+text_middle_r
+	list-style-type: none
+	color: $black_light1 
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 5px
+		height: 5px
+		margin-top: 10px 
+		border-radius: 5px
+		border-radius: 50%
+		background: $black_light1
+
+.career-news-title
+	+col()
+	+size(12)
+	+xs-block()
+		padding-left: 10px 
+		padding-right: 10px 
+
+.career-news-title__name
+	margin-top: 50px 
+	margin-bottom: 40px
+	+caption_high_cb 
+	font-size: 40px 
+	color: $black_light1
+	&.career-news-title__name--mb0 
+		margin-bottom: 0
+
+
+.careers-info-counted-list
+	counter-reset: numbers 0
+
+.careers-info-counted-list__items
+	position: relative
+	margin-bottom: 35px 
+	margin-left: 20px
+	+text_middle_r
+	text-transform: uppercase
+	list-style-type: none 
+	color: $black_light1 
+	&::before
+		content: counter(numbers) ""
+		counter-increment: numbers
+		position: absolute
+		top: 0
+		left: -58px
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 38px
+		height: 38px
+		margin-top: -7px 
+		+text_middle_b 
+		background: url(../images/main/icon/count_bg.svg) no-repeat center/contain 
+		color: $white 
+
+.careers-info-vacancies
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-top: 30px 
+	margin-bottom: 30px 
+
+.careers-info-vacancies__items 
+	width: 40%
+	+md-block()
+		width: 45% 
+	+xs-block()
+		width: 100%	
+
+.careers-info-vacancies__link
+	display: flex
+	flex-direction: column
+	padding-left: 30px 
+	padding-bottom: 25px 
+	+trs 
+	input 
+		display: none
+	input:checked + label 
+		color: $acceptor_green
+		&:after 
+			background: url(../images/main/icon/vac_bg_solid.svg) no-repeat center/16px 14px  
+	&:hover 
+		.careers-info-vacancies__inner-items
+			&:after
+				background: url(../images/main/icon/vac_bg_solid.svg) no-repeat center/9px 9px  
+
+
+.careers-info-vacancies__type
+	position: relative
+	z-index: 1
+	margin-bottom: 5px 
+	+caption_small_cr
+	color: $black_light1
+	cursor: pointer
+	+trs 
+	&:after 
+		content: ''
+		position: absolute 
+		left: -30px
+		top: 0 
+		width: 16px
+		height: 14px
+		z-index: -1  
+		margin-top: 8px 
+		background: url(../images/main/icon/vac_bg.svg) no-repeat center/16px 14px 
+		+trs 
+	&:hover 
+		color: $acceptor_green
+
+.careers-info-vacancies__descr 
+	height: 100px
+	margin-bottom: 10px 
+	+text_middle_r
+	color: $black
+	overflow: hidden
+	&.cards-section__descr--full-view
+		height: auto 
+
+.careers-info-vacancies__read
+	+text_middle_cm
+	color: $acceptor_green
+	cursor: pointer
+	+trs 
+	&.cards-section__button--active
+		span 
+			&:first-child
+				display: none
+			&:last-child
+				display: block 
+	span 
+		&:last-child
+			display: none
+
+.careers-info-vacancies-btn
+	margin-top: 25px 
+
+
+.careers-info-vacancies__inner-list 
+	margin-top: -20px 
+	margin-bottom: 20px 
+	padding-left: 51px 
+	+xs-block()
+		padding-left: 0
+
+.careers-info-vacancies__inner-items
+	position: relative
+	z-index: 1
+	margin-bottom: 5px 
+	color: $black_light1
+	input 
+		display: none
+	input:checked + .careers-info-vacancies__type
+		&:after
+			background: url(../images/main/icon/vac_bg_solid.svg) no-repeat center/9px 9px
+	.careers-info-vacancies__type
+		+text_middle_r
+		&:after 
+			content: ''
+			position: absolute 
+			left: 0
+			top: 0 
+			width: 9px
+			height: 9px
+			z-index: -1  
+			margin-top: 5px
+			margin-left: -21px  
+			background: url(../images/main/icon/vac_bg.svg) no-repeat center/9px 9px 
+			+trs 
+
+.careers-info-aside 
+	+md-block()
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+
+.contacts-form--shadow
+	.select-wrap__text
+		+bx_shadow_cart_input
+
+.careers-info-aside__share-box 
+	display: flex
+	justify-content: space-between
+	padding-top: 20px
+	padding-bottom: 20px
+	margin-top: 20px 
+	border-top: 1px solid rgba($data_color, .2)
+	+md-block()
+		justify-content: center
+
+.careers-info-aside__button
+	display: flex
+	align-items: center
+	margin-bottom: 20px 
+	+text_middle_cr
+	color: $data_color
+	background: none 
+	border: none 
+	cursor: pointer
+	outline: none 
+	+trs 
+	&:hover 
+		color: $acceptor_green
+		.careers-info-aside__icon
+			fill: $acceptor_green
+
+.careers-info-aside__icon
+	min-width: 25px
+	max-width: 38px
+	height: 23px 
+	margin-right: 6px 
+	fill: $data_color
+	+trs 
+
+.careers-info-aside__title
+	margin-top: 10px
+	margin-bottom: 10px 
+	+text_middle_cb
+	color: $black_light1 
+
+.careers-info-aside__descr 
+	+text_middle_cr 
+	color: $black_light1 
+
+.careers-info-list
+	margin-top: 30px 
+	margin-bottom: 30px 
+	padding-left: 50px 
+
+.careers-info-list__items
+	position: relative
+	margin-bottom: 20px  
+	+text_middle_r
+	color: $black_light1
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 6px
+		height: 6px 
+		margin-left: -40px 
+		margin-top: 10px 
+		border-radius: 50% 
+		background: $black_light1
+
+
+.benefits-slider__items  
+	position: relative
+	max-width: 161px 
+	padding: 20px 
+	padding-top: 0
+	&:hover 
+		.benefits-slider__overlay 
+			opacity: 1 
+		.benefits-slider__items-inner
+			background: $acceptor_green 	
+			img
+				&:first-child
+					display: none
+				&:last-child
+					display: block
+
+.benefits-slider__items-inner
+	position: relative
+	z-index: 2
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	width: 125px
+	height: 125px 
+	margin: 0 auto 
+	border-radius: 50% 
+	+bx_shadow_cart 
+	overflow: hidden
+	background: $white 
+	+trs 
+	img
+		// animation: fadeIn 1s linear infinite
+		&:last-child
+			display: none
+
+.benefits-slider__overlay
+	position: relative
+	opacity: 0
+	+trs 
+	&:after 
+		content: ''
+		position: absolute
+		bottom: -15px
+		left: 50% 
+		z-index: -1
+    width: 0
+    height: 0 
+		margin-left: -15px 
+		border: 0 solid transparent 
+		border-right-width: 15px
+		border-left-width: 15px
+		border-top: 15px solid $acceptor_green 
+
+.benefits-slider__overlay-wrap
+	padding: 15px 
+	padding-top: 10px 
+	padding-bottom: 10px 
+	margin-bottom: 20px
+	background: $acceptor_green 
+	color: $white 
+	border-radius: 5px 
+	overflow: hidden
+	+trs 
+
+
+.benefits-slider__overlay-inner
+	height: 50px 
+	margin-right: -42px
+	padding-right: 42px
+	overflow: hidden
+	overflow-y: auto 
+
+.benefits-slider__discount-title
+	+text_middle_cb
+	// margin-bottom: 5px 
+
+.benefits-slider__discount-descr 
+	+text_small_cr
+
+.benefits-slider-pagination
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 50px 
+
+.benefits-slider-pagination__btn
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 60px
+	height: 60px 
+	background: none 
+	border: none 
+	border-radius: 50% 
+	border: 2px solid $acceptor_green
+	cursor: pointer
+	+trs 
+	&:hover 
+		background: $acceptor_green 
+		.benefits-slider-pagination__icon
+			fill: $white
+	&.benefits-slider-pagination__btn--next 
+		margin-left: 30px 
+		.benefits-slider-pagination__icon
+			transform: rotate(-180deg)
+		
+.benefits-slider-pagination__icon
+	width: 28px
+	height: 28px 
+	fill: $acceptor_green 
+	+trs 
+
+
+.careers-update__col 
+	+col()
+	+size(12)
+	position: relative
+	z-index: 1
+	display: flex
+	justify-content: center	
+	align-items: center
+	flex-direction: column
+	padding-top: 86px 
+	padding-bottom: 86px
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1 
+		width: 100%
+		height: 100% 
+		background: linear-gradient(0deg, rgba(31, 113, 188, 0.7), rgba(31, 113, 188, 0.7)) 
+
+.careers-update__info-box
+	display: flex
+	justify-content: center
+	flex-direction: column
+	align-items: center
+	max-width: 767px
+	padding-left: 20px 
+	padding-right: 20px 
+	margin: 0 auto 
+	text-align: center
+
+.careers-update__title
+	margin-bottom: 13px 
+	+caption_high_cb
+	color: $white 
+
+.careers-update__text 
+	+text_high_cb
+	color: $white 
+
+.careers-about-content
+	padding-top: 50px 
+
+.careers-about-content__col
+	+col()
+	+size(8)
+	+size-lg(12)
+	margin: 0 auto 
+
+.careers-about-content-video
+	height: 446px 
+	+xl-block()
+		width: 100%
+		height: auto 
+		height: 305px!important
+		img 
+			width: 100%
+			object-fit: cover 
+			height: 100% 
+
+.news-accordion__col 
+	+col()
+	+size(12)
+
+
+.share-box
+	display: flex
+	align-items: center
+
+.share-box__link 
+	display: flex
+	width: 52px
+	height: 52px 
+	margin-right: 64px 
+	border-radius: 50% 
+	+bx_shadow_social
+	img 
+		width: 100%
+		height: 100% 
+	&:last-child
+		margin-right: 0
+
+.careers-timeline 
+	+col()
+	+size(12)
+	margin-bottom: 100px
+	+sm-block()
+		margin-bottom: 20px
+
+.careers-timeline__inner 
+	display: flex
+	align-items: stretch 
+	+sm-block()
+		flex-direction: column
+		padding-bottom: 50px
+		overflow-x: auto
+		width: 100% 
+		align-items: unset 
+
+.careers-timeline-user
+	max-width: 456px 
+	position: relative
+	z-index: 1 
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		z-index: -1
+		width: 22px
+		height: 22px 
+		border-radius: 50% 
+		background: $acceptor_green 
+
+
+.careers-timeline-user__photo
+	width: 227px
+	height: 278px 
+	overflow: hidden
+	img 
+		width: 100%
+		height: 100% 
+		object-fit: cover 
+
+.careers-timeline__content
+	+sm-block()
+		width: 100% 
+		min-width: 100% 
+	&.careers-timeline__content--left
+		+sm-block()
+			display: flex
+		.careers-timeline-user
+			position: relative
+			z-index: 1 
+			margin-right: 58px
+			margin-bottom: 90px 
+			&::after
+				right: 0 
+				z-index: -1
+				margin-right: -74px
+				+sm-block()
+					left: 0
+					right: unset 
+					top: unset 
+					bottom: 0px 
+					z-index: 1 
+					margin-bottom: -65px 
+					margin-right: unset 
+				// +md-block()
+				// 	margin-right: -15px 
+			+sm-block()
+				display: flex
+				flex-direction: row
+				max-width: initial
+				margin-right: 50px 
+				margin-bottom: 50px
+		.careers-timeline-user__descr
+			text-align: right
+			+sm-block()
+				min-width: 300px
+				max-width: 300px
+				height: 278px 
+				overflow-y: auto
+				box-sizing: border-box 
+		.careers-timeline-user__photo
+			margin-left: auto 
+			+sm-block()
+				min-width: 257px 
+	&.careers-timeline__content--right
+		+sm-block()
+			display: flex
+		.careers-timeline-user
+			position: relative
+			z-index: 1
+			margin-left: 58px
+			margin-top: 90px 
+			&::after
+				left: 0
+				z-index: -1
+				margin-left: -74px
+				+sm-block()
+					left: unset 
+					right: 0
+					z-index: 1 
+					margin-left: unset 
+					margin-top: -57px
+				// +md-block()
+				// 	margin-left: -15px
+			+sm-block()
+				display: flex
+				flex-direction: row-reverse
+				max-width: initial
+				margin-left: unset 
+				margin-top: 50px 
+				margin-right: 50px 
+		.careers-timeline-user__photo
+			+sm-block()
+				min-width: 257px 
+		.careers-timeline-user__descr 
+			+sm-block()
+				min-width: 300px
+				max-width: 300px
+				height: 278px 
+				overflow-y: auto
+				box-sizing: border-box 
+
+
+.careers-timeline-user__descr
+	padding: 20px 
+	+bx_shadow_timeline_cart 
+
+.careers-timeline-user__name
+	+caption_small_cb
+	color: $acceptor_green
+
+.careers-timeline-user__release-time 
+	margin-bottom: 10px
+	+text_middle_cb
+	color: $data_color
+
+.careers-timeline-user__text 
+	+text_middle_r 
+	color: $black_light1
+
+.careers-timeline__line
+	// position: relative
+	+from(780px)
+		position: relative
+
+.careers-timeline__line-inner 
+	width: 9px
+	min-width: 9px
+	// height: 100vh
+	min-height: 100%
+	max-height: 100%
+	opacity: .3
+	background: linear-gradient(180deg, $white 0%, $data_color 3.38%)
+	+sm-block()
+		position: absolute
+		// top: 0
+		// left: 0
+		height:  9px
+		min-height:  9px
+		width: 100% 
+
+
+.careers-timeline__load-btn
+	+from(780px)
+		position: absolute
+		bottom: 0
+		z-index: 1 
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		min-width: 124px
+		max-width: 124px
+		min-height: 124px
+		margin-left: -54px
+		margin-bottom: -124px 
+		+text_small_cb
+		border-radius: 50% 
+		color: $white
+		background: $acceptor_green 
+	+trs 
+	&.careers-timeline__load-btn--mobile 
+		display: none
+		+sm-block()
+			display: block 
+			margin: 0 auto 
+			text-align: center
+
+	&.careers-timeline__load-btn--desktop
+		+sm-block()
+			display: none
+	&:hover 
+		background: $acceptor_blue 
+
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	.careers-timeline__load-btn
+		+from(780px)
+			min-height: unset 
+			height: 124px
+		
+
+
+// print 
+@media print
+
+	.careers-info__col-content 
+		visibility: visible
+
+
+	.careers-update,
+	.header,
+	.footer,
+	.careers-info__col-aside,
+	.careers-info__col,
+	.careers-info__col-full,
+	.benefits-slider-pagination,
+	.careers-about-content,
+	.breadcrumbs,
+	.inner-top-thumb
+		display: none	

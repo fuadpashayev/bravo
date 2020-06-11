@@ -1,0 +1,26 @@
+extends _template_map1.pug
+block content 
+	include header/_header_inner
+	// main 
+	main.main
+		- var breadcrumbs = 'Find Stores'
+		- var thumbTitle = 'Find Stores'
+		section.breadcrumbs 
+			.container 
+				.row 
+					.breadcrumbs_col 
+						.breadcrumbs__nav 
+							a.breadcrumbs__item.preloader-overlay.preloader-overlay--vertical(href="#") 
+								+icon('home', 'breadcrumbs__icon')
+							span.breadcrumbs__item.breadcrumbs__item--inactive.preloader-overlay.preloader-overlay--vertical 
+								+icon('arrow', 'breadcrumbs__icon breadcrumbs__icon--arrow')
+								= breadcrumbs		
+		section.inner-top-thumb.section--mb-inner
+			.container.container--full 
+				.row 
+					.container-inner 
+						.inner-top-thumb__box.preloader.preloader--v(style="background: url(./images/main/about/thumb.jpg) no-repeat center/cover")
+							h1.inner-top-thumb__title 
+								= thumbTitle
+		include store/_store2
+	include footer/_footer

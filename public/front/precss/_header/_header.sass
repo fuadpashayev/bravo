@@ -1,0 +1,290 @@
+.header
+	position: relative
+	z-index: 2
+	background: $white 
+	+bx_shadow_cart
+	border-top: 10px solid $acceptor_green
+	&.header--no-border 
+		border-top: 0  
+	.row 
+		position: relative
+
+.main-nav 
+	+col()
+	+size(9)	
+	display: flex
+	align-items: center
+	&.main-nav--careers 
+		+md-block()
+			+size(7)
+			+size-xs(4)
+
+.logo
+	position: relative
+	z-index: 2
+	display: flex
+	justify-content: center
+	align-items: center 
+	padding-top: 10px 
+	padding-left: 19.5px 
+	padding-right: 19.5px 
+	padding-bottom: 14px 
+	margin-bottom: -10px 
+	box-sizing: border-box 
+	background: $acceptor_green 
+	+trs 
+	+md-block()
+		margin-bottom: 0
+	+xs_small-block()
+		padding-right: 10px 
+		padding-left: 10px 
+		img 
+			width: 60px
+			height: 55px 
+	img 
+		width: 78px
+		height: 61px 
+		+trs 
+
+.main-menu 
+	display: flex
+	align-items: center
+	margin-left: 42px 
+	+xl-block()
+		margin-left: 20px 
+	+lg-block()
+		margin-left: 10px 	
+	+md-block()
+		display: none	
+		&.main-menu--active 
+			position: absolute
+			top: 100%
+			left: -10px
+			z-index: 5
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			animation: fadeIn 0.7s ease-in-out 
+			border: 0.5px solid rgba($bg_body, .45)
+			background: $white
+	+xs-block()
+		align-items: stretch
+
+.header-back-link
+	+col()
+	+size(12)
+	position: relative
+	z-index: 1
+	background: $acceptor_green 
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: -100% 
+		z-index: -1
+		width: 100%
+		height: 100%
+		background: $acceptor_green  
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		right: -100% 
+		z-index: -1
+		width: 100%
+		height: 100%
+		background: $acceptor_green  
+
+.header-back-link__main
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	padding-top: 3px 
+	padding-bottom: 3px 
+	color: $white 
+	+trs 
+	&:hover 
+		color: $black_light4
+		.header-back-link__icon
+			fill: $black_light4
+
+.header-back-link__icon
+	width: 16px
+	height: 16px 
+	margin-right: 6px 
+	fill: $white 
+	// background: $white 
+	+trs 
+
+.main-menu__list 
+	&.main-menu__list--active 
+		.main-menu__link
+			color: $acceptor_green
+	&:last-child
+		.main-menu__link 
+			padding-right: 0 
+	+md-block()
+		width: 50% 
+		flex-grow: 1
+	+xs-block()
+		overflow: hidden	
+	+to(365px)
+		width: 100%	
+
+
+.main-menu__link 
+	display: flex
+	padding-right: 23px 
+	+text_middle_cr
+	letter-spacing: 0.03em
+	color: $black_light1
+	+trs 
+	+xl-block()
+		padding-right: 10px 
+	+lg-block()
+		padding-right: 8px 	
+	+md-block()
+		padding: 20px
+		border-right: 0.5px solid rgba($bg_body, .45)	
+		border-bottom: 0.5px solid rgba($bg_body, .45)	
+		&:hover 
+			background: rgba($acceptor_green, .1)
+	+xs-block()
+		height: 100%		
+	&:hover 
+		color: $acceptor_green
+
+// find place and lang 
+.store-place__job-link
+	+xl-block()
+		padding-top: 0 
+		padding-bottom: 0 
+		padding-left: 0 
+		padding-right: 0 
+		background: none !important
+		color: $acceptor_green 
+		&:hover 
+			color: $acceptor_blue
+.lang
+	&.lang--align-center
+		.select-wrap__option
+			margin-top: 5px
+		.select-wrap
+			min-height: auto 
+.store-place
+	+col()
+	+size(3)
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	align-items: flex-end
+	padding-bottom: 7px 
+	&.store-place--align-center
+		align-items: center
+		padding-bottom: 0
+		+md-block()
+			+size(5)
+			+size-xs(8)
+	+md-block()
+		align-items: center
+		padding-bottom: 0
+
+.store-search 
+	display: flex 
+	align-items: flex-start 
+	padding-right: 28px 
+	border-right: 0.5px solid rgba($data_color, .5)
+	transform: translateX(5px)
+	+trs
+	+md-block()
+		// min-height: 45px 
+	+xs-block()
+		padding-right: 10px	
+	&:hover 
+		.store-search__icon-svg
+			fill: $acceptor_green
+
+.hamburger
+	display: none
+	+md-block()
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		margin-left: 25px
+		height: 28px  
+		cursor: pointer
+		background: none 
+		border: none
+		+trs  
+		+xs-block()
+			margin-left: 10px
+		&.hamburger--active
+			.hamburger__item
+				&:after 
+					transform: translateX(0%)
+		&:hover
+			.hamburger__item
+				&:after 
+					transform: translateX(0%)
+
+
+.hamburger__item
+	position: relative
+	z-index: 1
+	width: 26px
+	height: 3px
+	margin-bottom: 4px 
+	background: $black_light1 			
+	+trs 
+	overflow: hidden
+	&:first-child
+		&::after
+			+trs($timeout: .1s)
+	&:nth-child(2)
+		&::after
+			+trs($timeout: .2s)
+	&:nth-child(3)
+		margin-bottom: 0px
+		&::after
+			+trs($timeout: .3s)
+	&:after 
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		width: 100%
+		height: 100%
+		transform: translateX(-100%)
+		background: $acceptor_green
+		+trs 
+
+.store-search__icon-svg
+	width: 20px
+	height: 22px
+	margin-right: 5px 
+	fill: $black_light1
+	+trs 
+
+.store-search__descr
+	+text_middle_cm 
+	opacity: .8 
+	color: $black_light1 
+	+trs 
+
+.store-search__text
+	display: flex
+	flex-direction: column
+	+md-block()
+		display: none
+	&.store-search__text--mobile 
+		display: none
+		+md-block()
+			display: flex
+
+.store-search__title 
+	+text_small_cm
+	// line-height: 1.8 
+	color: $acceptor_green
+

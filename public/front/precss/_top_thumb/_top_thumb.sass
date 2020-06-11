@@ -1,0 +1,50 @@
+.inner-top-thumb
+	&.inner-top-thumb--white-bg 
+		background: $white 
+.inner-top-thumb__box
+	position: relative
+	z-index: 1
+	display: flex
+	justify-content: center
+	align-items: center
+	min-height: 535px 
+	&.inner-top-thumb__box--overlay-none 
+		&::after
+			display: none
+			// background: $white 
+	+sm-block()
+		min-height: 300px
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1 
+		width: 100%
+		height: 100%
+		background: linear-gradient(0deg, rgba($black, 0.15), rgba($black, 0.15))
+
+.inner-top-thumb__title
+	padding: 10px 
+	padding-top: 70px 
+	padding-bottom: 70px 
+	+caption_high_cb
+	font-size: 50px
+	color: $white 
+	+sm-block()
+		line-height: 1.2 
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	.inner-top-thumb
+		.container-inner
+			display: table
+	.inner-top-thumb__box
+		display: table-cell
+		width: 100%
+		height: 100% 
+		vertical-align: middle
+
+	.inner-top-thumb__title
+		text-align: center
+		min-height: 100px 

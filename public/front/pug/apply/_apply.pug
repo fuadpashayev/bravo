@@ -1,0 +1,119 @@
+section.careers-info.section--pb-last
+	.container 
+		.row 
+			.careers-info__col
+				h1.preloader.preloader--v.careers-info__title Apply
+				form.contacts-form.contacts-form--shadow
+					.contacts-form__row
+						.contacts-form__col.contacts-form__col--full  
+							label.preloader.preloader--v.contacts-form__label Vacancy
+							.preloader.preloader--v.select-wrap__text.select-wrap__text--full(data-select-wrap="apply-select-1.1" data-select-focus="false")  
+								input.select-wrap__input(type="hidden", name="contacts-page-family", value="Choose your info" data-select-input="apply-select-1.1")      
+								.select-wrap__selected.select-wrap__selected--grey(data-selected-item="apply-select-1.1" data-selected-focus="false" ) Select
+								+icon('arrow', 'select-wrap__icon-svg select-wrap__icon-svg--arrow') 
+								.select-wrap__option.select-wrap__option--form-page(data-select-option="apply-select-1.1" data-select-option-opened="false" data-select-option-scroll="true")
+									span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose request type 1"  data-select-option-input="apply-select-1.1") Choose request type 1  
+									span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose request type 2"  data-select-option-input="apply-select-1.1") Choose request type 2  
+									span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose request type 3"  data-select-option-input="apply-select-1.1") Choose request type 3 
+					.contacts-form__row
+						.contacts-form__col.contacts-form__col--full.contacts-form__col--mt
+							label.preloader.preloader--v.contacts-form__label.contacts-form__label--title Ümumi suallar
+					.contacts-form__row
+						.preloader.preloader--v.contacts-form__col.contacts-form__col--half  
+							label.contacts-form__label.contacts-form__label--black Ad, soyad
+							input.contacts-form__input(type="text", name="apply-page-user-name" placeholder="Paste your info" required)
+						.preloader.preloader--v.contacts-form__col.contacts-form__col--half  
+							label.contacts-form__label.contacts-form__label--black Əlaqə nömrə
+							input.contacts-form__input(type="number", name="apply-page-user-number" placeholder="Paste your info" required)
+					.contacts-form__row
+						.contacts-form__col.contacts-form__col--full.contacts-form__col--mt  
+							label.preloader.preloader--v.contacts-form__label.contacts-form__label--title Təcrübə:
+					.contacts-form__row
+						.contacts-form__col.contacts-form__col--full  
+							label.preloader.preloader--v.contacts-form__label.contacts-form__label--black Mağaza idarə heyətində təcrübəm:
+							.contacts-form__sub-col 
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox1(type="radio", name="apply-page-radio-experience")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox1") Təcrübəm yoxdur
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox2(type="radio", name="apply-page-radio-experience")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox2") 0 — 6 ayadək
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox3(type="radio", name="apply-page-radio-experience")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox3") 6 aydan — 1 ilədək
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox4(type="radio", name="apply-page-radio-experience")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox4") 1 ildən — 3 ilədək 
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox5(type="radio", name="apply-page-radio-experience")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox5") 3 ildən çox
+					.contacts-form__row
+						.contacts-form__col.contacts-form__col--full  
+							label.preloader.preloader--v.contacts-form__label.contacts-form__label--black Hazirda işləyirsinizmi?
+							.contacts-form__sub-col 
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox51(type="radio", name="apply-page-radio-work")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox51") Bəli
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox6(type="radio", name="apply-page-radio-work")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox6") Xeyr 
+					.contacts-form__row
+						.preloader.preloader--v.contacts-form__col.contacts-form__col--full
+							label.contacts-form__label.contacts-form__label--black Hal-hazırda və ya ən son çalışdığıınız vəzifə 
+							textarea.contacts-form__textarea(name="apply-page-user-work-place" placeholder="Please help me contact with your company") 
+					.contacts-form__row
+						.preloader.preloader--v.contacts-form__col.contacts-form__col--full
+							label.contacts-form__label.contacts-form__label--black Hal-hazırda və ya ən son çalışdığıınız vəzifə 
+							textarea.contacts-form__textarea(name="apply-page-user-work-place-name" placeholder="Please help me contact with your company") 
+					.contacts-form__row
+						.contacts-form__col.contacts-form__col--full  
+							label.preloader.preloader--v.contacts-form__label.contacts-form__label--black Hazirda işləyirsinizmi?
+							.contacts-form__sub-col 
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox7(type="radio", name="apply-page-radio-store-board-info")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox7") BRAVO-nun əməkdaşından
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox8(type="radio", name="apply-page-radio-store-board-info")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox8") BRAVO əməkdaşı olmayan dost və ya ailə üzvündən 
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox9(type="radio", name="apply-page-radio-store-board-info")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox9") Facebook
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox10(type="radio", name="apply-page-radio-store-board-info")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox10") İnstagram
+								.preloader.preloader--v.contacts-form__checkbox-wrap
+									input.contacts-form__checkbox#contact-form__checkbox11(type="radio", name="apply-page-radio-store-board-info")
+									label.contacts-form__checkbox-label(for="contact-form__checkbox11") Linked in  
+					.contacts-form__row
+						.contacts-form__col.contacts-form__col--full 
+							label.preloader.preloader--v.contacts-form__label.contacts-form__label--black Sənəd əlavə etmək
+							.row  	
+								.contacts-form__col.contacts-form__col--half  
+									.preloader.preloader--v.contact-form-loaded
+										input.contact-form-loaded__input(type="file", name="contacts-page-presentation-file")
+										button.contact-form-loaded__close
+											+icon('close', 'contact-form-loaded__icon-svg')
+										.contact-form-loaded__inner 
+											.contact-form-loaded__img 
+												img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+												img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+											.contact-form-loaded__content 
+												h4.contact-form-loaded__title Əlavə №1
+												p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+								.contacts-form__col.contacts-form__col--half  
+									.preloader.preloader--v.contact-form-loaded
+										input.contact-form-loaded__input(type="file", name="contacts-page-presentation-file")
+										button.contact-form-loaded__close
+											+icon('close', 'contact-form-loaded__icon-svg')
+										.contact-form-loaded__inner 
+											.contact-form-loaded__img 
+												img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+												img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+											.contact-form-loaded__content 
+												h4.contact-form-loaded__title Əlavə №1
+												p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+					.contacts-form__row.contacts-form__row--send-btn
+						.contacts-form__col.contacts-form__col--half 
+							button.preloader.preloader--v.contacts-form__send-btn.primary-btn.primary-btn--green 
+								+icon('send', 'contacts-form__send-icon')
+								| Send Form 

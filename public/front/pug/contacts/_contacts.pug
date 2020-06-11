@@ -1,0 +1,384 @@
+section.about 
+	.container 
+		.row 
+			aside.about-aside
+				nav.about-aside__nav 
+					ul.about-aside__menu
+						li.about-aside__items.preloader.preloader--v
+							span.about-aside__link.simple-tab__link--active(data-simple-tab-nav="contacts-tab-1") Potential Suppliers
+						li.about-aside__items.preloader.preloader--v
+							span.about-aside__link(data-simple-tab-nav="contacts-tab-2") B2B
+						li.about-aside__items.preloader.preloader--v
+							span.about-aside__link(data-simple-tab-nav="contacts-tab-3") Advertisers
+						li.about-aside__items.preloader.preloader--v
+							span.about-aside__link(data-simple-tab-nav="contacts-tab-4") Media & Press
+						li.about-aside__items.preloader.preloader--v
+							span.about-aside__link(data-simple-tab-nav="contacts-tab-5") Feedback
+			article.about-post
+				.about-post__col.preloader.preloader--v.simple-tab__content--active(data-simple-tab-content="contacts-tab-1") 
+					h2 Supplier Registration Form
+					p Empty place for intro text
+					br
+					br
+					form.contacts-form 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Company name 
+								input.contacts-form__input(type="text", name="contacts-page-company-name" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Presentation of Company
+								input.contacts-form__input(type="text", name="contacts-page-company-presentation" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Tax ID / VAT number
+								input.contacts-form__input(type="text", name="contacts-page-tax-id" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Legal address (str.avn. apt.etc)
+								input.contacts-form__input(type="text", name="contacts-page-address" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label District
+								input.contacts-form__input(type="text", name="contacts-page-distict" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label City
+								input.contacts-form__input(type="text", name="contacts-page-city" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Country 
+								input.contacts-form__input(type="text", name="contacts-page-country" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Post code
+								input.contacts-form__input(type="text", name="contacts-page-post-code" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Phone 
+								input.contacts-form__input(type="number", name="contacts-page-number" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Email address
+								input.contacts-form__input(type="email", name="contacts-page-email" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Family
+								.select-wrap.select-wrap--form-page
+									.select-wrap__text.select-wrap__text--full(data-select-wrap="fsr-select-1" data-select-focus="false")
+										input.select-wrap__input(type="hidden", name="contacts-page-family", value="Choose your info" data-select-input="fsr-select-1") 
+										.select-wrap__selected.select-wrap__selected--grey(data-selected-item="fsr-select-1" data-selected-focus="false" ) Choose your info 
+										+icon('arrow', 'select-wrap__icon-svg select-wrap__icon-svg--arrow')
+									.select-wrap__option.select-wrap__option--form-page(data-select-option="fsr-select-1" data-select-option-opened="false" data-select-option-scroll="true")
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose your info 1"  data-select-option-input="fsr-select-1") Choose your info 1 	
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose your info 2"  data-select-option-input="fsr-select-1") Choose your info 2 	
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose your info 3"  data-select-option-input="fsr-select-1") Choose your info 3 	
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Category
+								.select-wrap.select-wrap--form-page
+									.select-wrap__text.select-wrap__text--full(data-select-wrap="fsr-select-2" data-select-focus="false")
+										input.select-wrap__input(type="hidden", name="contacts-page-family", value="Choose your info" data-select-input="fsr-select-2") 
+										.select-wrap__selected.select-wrap__selected--grey(data-selected-item="fsr-select-2" data-selected-focus="false" ) Choose your info 
+										+icon('arrow', 'select-wrap__icon-svg select-wrap__icon-svg--arrow')
+									.select-wrap__option.select-wrap__option--form-page(data-select-option="fsr-select-2" data-select-option-opened="false" data-select-option-scroll="true")
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose your info 1"  data-select-option-input="fsr-select-2") Choose your info 1 	
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose your info 2"  data-select-option-input="fsr-select-2") Choose your info 2 	
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose your info 3"  data-select-option-input="fsr-select-2") Choose your info 3 	
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Contact person 
+								input.contacts-form__input(type="text", name="contacts-page-contact-person" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Category
+								input.contacts-form__input(type="text", name="contacts-page-category" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-presentation-file")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Products price list
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-price-file")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Products price list
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-cert-file-1")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Company certificates
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-cert-file-2")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Company certificates
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+						.contacts-form__row.contacts-form__row--send-btn
+							.contacts-form__col.contacts-form__col--half 
+								button.contacts-form__send-btn.primary-btn.primary-btn--green 
+									+icon('send', 'contacts-form__send-icon')
+									| Send Form 
+
+					br
+					br
+					br
+					br
+				.about-post__col.preloader.preloader--v(data-simple-tab-content="contacts-tab-2") 
+					h2 B2B
+					p Biz təchizatçılarla əməkdaşlıq edirik və əgər siz də bizimlə əməkdaşlıq etməkdə maraqlısınızsa, aşağıdakı formanı doldurmağınız xahiş olunur.
+					br
+					br
+					form.contacts-form 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Company name 
+								input.contacts-form__input(type="text", name="contacts-page-company-name" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Category
+								.select-wrap.select-wrap--form-page
+									.select-wrap__text.select-wrap__text--full(data-select-wrap="fsr-select-2.1" data-select-focus="false")
+										input.select-wrap__input(type="hidden", name="contacts-page-family", value="Choose your info" data-select-input="fsr-select-2.1") 
+										.select-wrap__selected.select-wrap__selected--grey(data-selected-item="fsr-select-2.1" data-selected-focus="false" ) Choose your info 
+										+icon('arrow', 'select-wrap__icon-svg select-wrap__icon-svg--arrow')
+									.select-wrap__option.select-wrap__option--form-page(data-select-option="fsr-select-2.1" data-select-option-opened="false" data-select-option-scroll="true")
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose your info 1"  data-select-option-input="fsr-select-2.1") Choose your info 1 	
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose your info 2"  data-select-option-input="fsr-select-2.1") Choose your info 2 	
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose your info 3"  data-select-option-input="fsr-select-2.1") Choose your info 3 				
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Phone 
+								input.contacts-form__input(type="number", name="contacts-page-number" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--full
+								label.contacts-form__label Reviews 
+								textarea.contacts-form__textarea(name="contacts-page-review" placeholder="Please help me contact with your company")
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Legal address (str.avn. apt.etc) 
+								input.contacts-form__input(type="number", name="contacts-page-legal-address" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Email address
+								input.contacts-form__input(type="email", name="contacts-page-email" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-presentation-file")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Products price list
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-price-file")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Products price list
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-cert-file-1")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Company certificates
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-cert-file-2")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Company certificates
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+						.contacts-form__row.contacts-form__row--send-btn
+							.contacts-form__col.contacts-form__col--half 
+								button.contacts-form__send-btn.primary-btn.primary-btn--green 
+									+icon('send', 'contacts-form__send-icon')
+									| Send Form 
+					br
+					br
+					br
+					br
+
+				.about-post__col.preloader.preloader--v(data-simple-tab-content="contacts-tab-3") 
+					h2 Advertisers
+					.article-slider 
+						.article-slider__main.article-slider__main--slider-1.swiper-container.preloader.preloader--v
+							.swiper-wrapper
+								.swiper-slide
+									.article-slider__slide
+										img.swiper-lazy(src="./" data-src="./images/main/adv/s1.jpg", alt="bravo posr slider img")
+								.swiper-slide
+									.article-slider__slide
+										img.swiper-lazy(src="./" data-src="./images/main/adv/s1.jpg", alt="bravo posr slider img")
+								.swiper-slide
+									.article-slider__slide
+										img.swiper-lazy(src="./" data-src="./images/main/adv/s1.jpg", alt="bravo posr slider img")
+						.article-slide-count.article-slide-count--1
+						.article-slider-navigation
+							button.article-slider-navigation__btn.article-slider-navigation__btn--prev.article-slider-navigation__btn--prev-js-1
+								+icon('left_arr', 'pdf-booklet-controls__icon')
+							button.article-slider-navigation__btn.article-slider-navigation__btn--next.article-slider-navigation__btn--next-js-1
+								+icon('right_arr', 'pdf-booklet-controls__icon')
+
+					p Biz təchizatçılarla əməkdaşlıq edirik və əgər siz də bizimlə əməkdaşlıq etməkdə maraqlısınızsa, aşağıdakı formanı doldurmağınız xahiş olunur.
+					br
+					br
+					form.contacts-form 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Company name 
+								input.contacts-form__input(type="text", name="contacts-page-company-name" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Relevant person
+								input.contacts-form__input(type="text", name="contacts-page-company-relevant-person" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Email address
+								input.contacts-form__input(type="text", name="contacts-page-company-email" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Phone number 
+								input.contacts-form__input(type="number", name="contacts-page-number" placeholder="Paste your info" required)
+						.contacts-form__row.contacts-form__row--send-btn
+							.contacts-form__col.contacts-form__col--half 
+								button.contacts-form__send-btn.primary-btn.primary-btn--green 
+									+icon('send', 'contacts-form__send-icon')
+									| Send Form 
+					br
+					br
+					br
+					br
+					.contacts-info-box 
+						p.contacts-info-box__title Daha ətraflı məlumat üçün: 
+						.contacts-info-box__link-box 
+							a(href="tel:0512501094").contacts-info-box__link 
+								+icon('phone', 'contacts-info-box__icon')
+								| (051) 250 10 94 
+							a(href="mailto: info@bravosupermarket.az").contacts-info-box__link 
+								+icon('envelope', 'contacts-info-box__icon')
+								| info@bravosupermarket.az
+
+				.about-post__col.preloader.preloader--v(data-simple-tab-content="contacts-tab-4") 
+					h2 Media & Press
+					p KİV ilə bağlı hər hansı sualınız olarsa, xahiş edirik, aşağıdakı formadan istifadə edin:
+					br
+					br
+					form.contacts-form 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Company name 
+								input.contacts-form__input(type="text", name="contacts-page-company-name" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Relevant person
+								input.contacts-form__input(type="text", name="contacts-page-company-relevant-person" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Email address
+								input.contacts-form__input(type="text", name="contacts-page-company-email" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Phone number 
+								input.contacts-form__input(type="number", name="contacts-page-number" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Subject
+								input.contacts-form__input(type="text", name="contacts-page-company-email" placeholder="Paste your info" required)
+						.contacts-form__row 
+							.contacts-form__col.contacts-form__col--full
+								label.contacts-form__label Message 
+								textarea.contacts-form__textarea(name="contacts-page-message" placeholder="Please help me contact with your company")
+						.contacts-form__row.contacts-form__row--send-btn
+							.contacts-form__col.contacts-form__col--half 
+								button.contacts-form__send-btn.primary-btn.primary-btn--green 
+									+icon('send', 'contacts-form__send-icon')
+									| Send Form 
+					br
+					br
+					br
+					br
+
+				.about-post__col.preloader.preloader--v(data-simple-tab-content="contacts-tab-5") 
+					h2 Feedback
+					p Sual və ya rəyiniz olduqda, xahiş edirik, aşağıdakı əlaqə formasını doldurun.
+					br
+					br
+					form.contacts-form 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label First Name
+								input.contacts-form__input(type="text", name="contacts-page-feadback-first-name" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Last Name
+								input.contacts-form__input(type="text", name="contacts-page-feadback-last-name" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Email address
+								input.contacts-form__input(type="text", name="contacts-page-feadback-company-email" placeholder="Paste your info" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Phone number 
+								input.contacts-form__input(type="number", name="contacts-page-feadback-number" placeholder="Paste your info" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half  
+								label.contacts-form__label Request type:  
+								.select-wrap__text.select-wrap__text--full(data-select-wrap="fsr-select-4.1" data-select-focus="false")  
+									input.select-wrap__input(type="hidden", name="contacts-page-family", value="Choose your info" data-select-input="fsr-select-4.1")      
+									.select-wrap__selected.select-wrap__selected--grey(data-selected-item="fsr-select-4.1" data-selected-focus="false" ) Choose request type
+									+icon('arrow', 'select-wrap__icon-svg select-wrap__icon-svg--arrow') 
+									.select-wrap__option.select-wrap__option--form-page(data-select-option="fsr-select-4.1" data-select-option-opened="false" data-select-option-scroll="true")
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose request type 1"  data-select-option-input="fsr-select-4.1") Choose request type 1  
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose request type 2"  data-select-option-input="fsr-select-4.1") Choose request type 2  
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Choose request type 3"  data-select-option-input="fsr-select-4.1") Choose request type 3 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--full
+								label.contacts-form__label Message 
+								textarea.contacts-form__textarea(name="contacts-page-feadback-message" placeholder="Please help me contact with your company") 
+						.contacts-form__row.contacts-form__row--send-btn
+							.contacts-form__col.contacts-form__col--half 
+								button.contacts-form__send-btn.primary-btn.primary-btn--green 
+									+icon('send', 'contacts-form__send-icon')
+									| Send Form 
+					br
+					br
+					br
+					br

@@ -1,0 +1,30 @@
+extends _template.pug
+block content 
+	include header/_header_careers
+	// main 
+	main.main
+		- var breadcrumbsFirst = 'PRAKTIKUM Summer Internship Program'
+		- var breadcrumbsSecond = 'Apply'
+		//- - var thumbTitle = 'About Us'
+		section.breadcrumbs 
+			.container 
+				.row 
+					.breadcrumbs_col 
+						.breadcrumbs__nav 
+							a(href="#").breadcrumbs__item.breadcrumbs__item--grey-color.preloader-overlay.preloader-overlay--vertical 
+								+icon('home', 'breadcrumbs__icon')
+							a(href="#").breadcrumbs__item.breadcrumbs__item--grey-color.preloader-overlay.preloader-overlay--vertical 
+								+icon('arrow', 'breadcrumbs__icon breadcrumbs__icon--arrow')
+								= breadcrumbsFirst		
+							span.breadcrumbs__item.breadcrumbs__item--grey-color.breadcrumbs__item--inactive.preloader-overlay.preloader-overlay--vertical 
+								+icon('arrow', 'breadcrumbs__icon breadcrumbs__icon--arrow')
+								= breadcrumbsSecond
+		section.inner-top-thumb.inner-top-thumb--white-bg.section--pb-inner
+			.container.container--full 
+				.row 
+					.container-inner 
+						.inner-top-thumb__box.inner-top-thumb__box--overlay-none.preloader.preloader--v(style="background: url(./images/main/careers/2.jpg) no-repeat center/cover")
+							//- h1.inner-top-thumb__title 
+							//- 	= thumbTitle
+		include praktikum/_praktikum2
+	include footer/_footer

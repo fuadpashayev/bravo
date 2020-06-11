@@ -1,0 +1,129 @@
+.select-wrap 
+	position: relative
+	display: flex
+	flex-direction: column
+	align-items: flex-start 
+	padding-left: 30px 
+	min-height: 45px 
+	cursor: pointer
+	+md-block()
+		min-height: 28px 
+	+xs-block()
+		padding-left: 15px 	
+	&:hover
+		.select-wrap__icon-svg
+			fill: $acceptor_green
+	&.select-wrap--form-page
+		min-height: 50px  
+		padding-left: 0
+
+.select-wrap__text
+	display: flex
+	align-items: center 
+	cursor: pointer
+	// pointer-events: none 
+	&.select-wrap__text--full
+		justify-content: space-between
+		width: 100% 
+		height: 50px
+		padding-left: 20px 
+		padding-right: 20px  
+		box-sizing: border-box 
+		background: $white 
+		border-radius: 3px 
+		border: 1px solid rgba($acceptor_green, 0)
+		&[data-selected-focus="true"]
+			color: $acceptor_green
+		// &[data-select-focus="true"]
+		// 	border-color: rgba($acceptor_green, 0.4)
+
+.select-wrap__option
+	position: absolute
+	top: 100% 
+	left: 0
+	z-index: 6
+	width: 100%
+	display: flex 
+	flex-direction: column
+	background: $white 
+	+bx_shadow_cart 
+	&.select-wrap__option--form-page
+		margin-top: 2px  
+		box-sizing: border-box 
+
+.select-wrap__option-item
+	position: relative
+	z-index: 1
+	display: block
+	padding: 5px  
+	border-bottom: 0.5px solid rgba($data_color, .5)
+	text-transform: uppercase
+	cursor: pointer
+	+trs
+	&:hover 
+		background: $acceptor_green
+		color: $white
+	&.select-wrap__option-item--form-page 
+		padding-left: 20px 
+		padding-right: 20px 
+		padding-top: 10px 
+		padding-bottom: 10px 
+		text-transform: none 
+
+.select-wrap__selected
+	+text_middle_cm
+	text-transform: uppercase
+	opacity: .8 
+	color: $acceptor_green
+	pointer-events: none
+	&.select-wrap__selected--grey
+		width: 280px
+		height: 20px 
+		flex-grow: 1
+		overflow: hidden
+		text-transform: none 
+		+text_small_r 
+		color: $data_color
+		&[data-selected-changed="true"]
+			color: $acceptor_text_color
+		&[data-selected-focus="true"]
+			color: $acceptor_green
+	
+.select-wrap__icon-svg
+	width: 23px
+	height: 23px 
+	margin-right: 5px 
+	pointer-events: none
+	fill: $black_light1
+	+trs 
+	&.select-wrap__icon-svg--arrow
+		width: 16px 
+		height: 12px 
+		transform: rotate(90deg)
+		fill: $acceptor_green
+
+
+[data-select-wrap]
+	position: relative
+
+[data-selected-focus]
+	+trs 
+
+[data-select-focus="true"]
+	.select-wrap__icon-svg
+		fill: $acceptor_green
+
+[data-selected-focus="true"]
+	// color: $black_light1
+
+[data-select-option-opened="false"]
+	display: none
+
+[data-select-option-opened="true"]
+	display: block
+	animation: bounceIn 0.7s ease-in-out
+
+[data-select-option-scroll="true"]
+	max-height: 180px 
+	overflow-y: hidden
+	overflow-y: auto 

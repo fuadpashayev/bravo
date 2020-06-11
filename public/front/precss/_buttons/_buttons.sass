@@ -1,0 +1,24 @@
+// primary btn styles 
+.primary-btn
+	+general-btn
+	+trs
+	&.primary-btn--green 
+		background: $acceptor_green
+		&:hover
+			background: $acceptor_blue
+	&.primary-btn--outline-green 
+		+text_high_cb
+		text-transform: uppercase
+		border: 2px solid $acceptor_green 
+		background: none 
+		border-radius: 0px 
+		color: $acceptor_green
+		&:hover
+			background: $acceptor_green
+			color: $white
+	&.primary-btn--white 
+		background: $white
+		color: $black_light1
+		&:hover
+			color: $white
+			background: $acceptor_blue

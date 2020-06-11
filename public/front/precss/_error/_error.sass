@@ -1,0 +1,34 @@
+.error-page__col
+	+col()
+	+size(12)
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	padding-top: 150px 
+	padding-bottom: 250px 
+	+xs-block()
+		padding-top: 20px 
+		padding-bottom: 50px 
+
+.error-page__title
+	margin-bottom: 20px
+	+caption_high_cb
+	font-size: 40px 
+	text-transform: uppercase
+	color: $black_light1
+	+xs-block()
+		text-align: center 
+		line-height: 1.2
+
+.error-page__btn
+	text-transform: uppercase!important
+
+.error-page__img
+	position: relative
+	z-index: 1
+	max-width: 400px
+	height: 400px 
+	+xs-block()
+		max-width: 300px 
+		height: auto 

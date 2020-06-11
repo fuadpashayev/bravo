@@ -1,0 +1,675 @@
+section.about 
+	.container 
+		.row 
+			aside.about-aside
+				nav.about-aside__nav 
+					ul.about-aside__menu
+						li.about-aside__items.preloader.preloader--v
+							span.about-aside__link.simple-tab__link--active(data-simple-tab-nav="about-tab-1") Feedback Form 
+						li.about-aside__items.preloader.preloader--v
+							span.about-aside__link(data-simple-tab-nav="about-tab-2") FAQ
+						li.about-aside__items.preloader.preloader--v
+							span.about-aside__link(data-simple-tab-nav="about-tab-3" data-simple-tab-submenu="true") Consumer Protection Act
+							ul.about-aside__menu-inner
+								li.about-aside__items.preloader.preloader--v
+									span.about-aside__link(data-simple-tab-inner-nav="about-tab-3") Geri qaytarma və Dəyişdirmə siyasəti
+								li.about-aside__items.preloader.preloader--v
+									span.about-aside__link(data-simple-tab-inner-nav="about-tab-4") Geri qaytarılmayan mallar haqqında məlumat
+
+			article.about-post
+				.about-post__col.preloader.preloader--v.simple-tab__content--active(data-simple-tab-content="about-tab-1") 
+					h2 Feedback Form
+					p 
+						i(style="color: red") * 
+						| - ilə işarə olunan sətirlərin doldurulması mütləqdir
+					br
+					br
+					form.contacts-form 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half  
+								label.contacts-form__label Müraciətin növü 
+								.select-wrap__text.select-wrap__text--full(data-select-wrap="feedback-form-select-1" data-select-focus="false")  
+									input.select-wrap__input(type="hidden", name="contacts-page-family", value="Choose your info" data-select-input="feedback-form-select-1")      
+									.select-wrap__selected.select-wrap__selected--grey(data-selected-item="feedback-form-select-1" data-selected-focus="false" ) Sual
+									+icon('arrow', 'select-wrap__icon-svg select-wrap__icon-svg--arrow') 
+									.select-wrap__option.select-wrap__option--form-page(data-select-option="feedback-form-select-1" data-select-option-opened="false" data-select-option-scroll="true")
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Təklif"  data-select-option-input="feedback-form-select-1") Təklif 
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="İrad"  data-select-option-input="feedback-form-select-1") İrad 
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Təşəkkür"  data-select-option-input="feedback-form-select-1") Təşəkkür
+							.contacts-form__col.contacts-form__col--half  
+								label.contacts-form__label Müraciətin mövzusu
+								.select-wrap__text.select-wrap__text--full(data-select-wrap="feedback-form-select-2" data-select-focus="false")  
+									input.select-wrap__input(type="hidden", name="contacts-page-family", value="Choose your info" data-select-input="feedback-form-select-2")      
+									.select-wrap__selected.select-wrap__selected--grey(data-selected-item="feedback-form-select-2" data-selected-focus="false" ) Məhsul çeşidi 
+									+icon('arrow', 'select-wrap__icon-svg select-wrap__icon-svg--arrow') 
+									.select-wrap__option.select-wrap__option--form-page(data-select-option="feedback-form-select-2" data-select-option-opened="false" data-select-option-scroll="true")
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Məsulun keyfiyyəti"  data-select-option-input="feedback-form-select-2") Məsulun keyfiyyəti 
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Qiyməti"  data-select-option-input="feedback-form-select-2") Qiyməti 
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Kassa xidməti"  data-select-option-input="feedback-form-select-2") Kassa xidməti
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Bonus və endirim kartları"  data-select-option-input="feedback-form-select-2") Bonus və endirim kartları
+										span.select-wrap__option-item.select-wrap__option-item--form-page(data-select-option-items="Digər"  data-select-option-input="feedback-form-select-2") Digər
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Ad, soyad 
+									i(style="color: red") * 
+								input.contacts-form__input(type="text", name="feedback-user-name" placeholder="example: Harry Hole" required)
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Elektron ünvan 
+									i(style="color: red") * 
+								input.contacts-form__input(type="email", name="feedback-user-email" placeholder="example: Art@example.com" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								label.contacts-form__label Əlaqə nömrə 
+									i(style="color: red") * 
+								input.contacts-form__input(type="number", name="feedback-user-phone" placeholder="example: +994756000000" required)
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--full
+								label.contacts-form__label Müraciətinin təsviri
+								textarea.contacts-form__textarea(name="feedback-user-message" placeholder="example: Please help me contact with your company")
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--full.contacts-form__col--pined-file-title
+								label.contacts-form__label Zəruri hallarda müraciəti təsvir edən foto/video görüntüləri aşağıda əlavə edə bilərsiniz.
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-presentation-file")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Əlavə №1
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-price-file")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Əlavə №2
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+						.contacts-form__row
+							.contacts-form__col.contacts-form__col--half
+								.contact-form-loaded
+									input.contact-form-loaded__input(type="file", name="contacts-page-cert-file-1")
+									button.contact-form-loaded__close
+										+icon('close', 'contact-form-loaded__icon-svg') 
+									.contact-form-loaded__inner 
+										.contact-form-loaded__img 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf_active.svg", alt="bravo market") 
+											img.contact-form-loaded__icon.blazy.blazy--style(src="./" data-src="./images/main/icon/pdf.svg", alt="bravo market") 
+										.contact-form-loaded__content 
+											h4.contact-form-loaded__title Əlavə №3
+											p.contact-form-loaded__descr Formats: .pdf .png .jpeg .jpg 
+						
+						.contacts-form__row.contacts-form__row--send-btn
+							.contacts-form__col.contacts-form__col--half 
+								button.contacts-form__send-btn.primary-btn.primary-btn--green 
+									+icon('send', 'contacts-form__send-icon')
+									| Send Form 
+					br
+					br
+					br
+					br
+				.about-post__col.preloader.preloader--v(data-simple-tab-content="about-tab-2")
+					h2 FAQ
+					.accordion
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top.accordion__descr--active
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| General Store information
+								.accordion__inner-wrap.accordion-visible
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What store formats do you have?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Where can I find the working hours of my local store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Where is my nearest store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| Payment
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| Product information. Availability of products
+
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| Product information
+
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| Refund and Return Policy - Our promise
+
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| Technical advice and support
+
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| General Information
+
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| Marketing Mailing
+
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| New Suppliers
+
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| Bravo Gift and Loyal cards
+
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+						.accordion__title
+								h5.accordion__descr.accordion__descr--top
+									+icon('arrow', 'accordion__arrow accordion__arrow--top')
+									| Delivery Service FAQs
+
+								.accordion__inner-wrap 
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Payment
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What type and methods of payment can I use in-store?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a gift card, how can I use it? Can I use it partly?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have an UMICO loyal bonus card savings; can I use them during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| How do we earn UMİCO bonus card`s points during  payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I have a Bravo loyal pension card; can I use it during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| I seem to have been charged twice the same transaction. What should I do?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| What shall I do if I have been overcharged?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+									.accordion__inner
+										h5.accordion__descr.accordion__descr--inner-title 
+											+icon('arrow', 'accordion__arrow ')
+											| Can I use both Loyal Cards during payment?
+										p.accordion__text.accordion__text--inner Answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer answer
+				.about-post__col.preloader.preloader--v(data-simple-tab-content="about-tab-3")
+					h2 Consumer Protection Act
+					br 
+					ol 
+						li Marketdə alınan məhsullar Müəssisənin siyasətinə və İstehlakçıların hüquqlarını müdafiəsi haqqında Azərbaycan Respublikasının qanununun 1-ci bəndinin 15-ci maddəsinə uyğun olaraq, satış əməliyyatından sonra 14 gün ərzində dəyişilə və ya geri qaytarıla bilər. 
+						li İstehlakçı tərəfindən əldə edilmiş lazımi keyfiyyətli mal istifadə olunmayıbsa və onun əmtəə görünüşü, istehlak xassələri, plombu, yarlığı, həmçinin mal və yaxud kassa qəbzi və ya ona mal ilə birlikdə verilmiş digər sənədləri saxlanılıbsa (zəmanət talonu və s), bu hallarda o dəyişdirilə/qaytarıla bilər
+						li Məhsulu geri qaytarmaq və ya deyiştirmək üçün müştəri alış-veriş etdiyi marketə müraciət etməlidir. 
+						li Məhsulu dəyişdirmə anında satışda uyğun mal yoxdursa, istehlakçı dəyəri yenidən hesablamaqla istənilən başqa bir malı almaq və ya qaytarılan malın dəyəri məbləğində pulu geri götürmək.
+				.about-post__col.preloader.preloader--v(data-simple-tab-content="about-tab-4")
+					h2 Consumer Protection Act
+					br 
+					p “İstehlakçıların hüquqlarının müdafiəsi haqqında” Azərbaycan Respublikası Qanununa əsasən Azərbaycan Respublikasının Nazirlər Kabineti 114 nömrəli qərarına əsasən dəyişdirilməli olmayan malların siyahısı:
+					ol 
+						li Qızıl və qızıl məlumatları.
+						li Qiymətli və yarımqiymətli metallardan, daşlardan hazırlanmış məlumatlar.
+						li İstehsal qüsurları istisna olmaqla bütün növ parçalar və ölçü ilə satılan bəzi mallar (lentlər, tesmalar, haşiyələr).
+						li Parfümer-kosmetika malları.
+						li Kişi, qadın və uşaq çimərlik paltarları.
+						li Bağça yaşlı və yeni doğulan uşaqlar üçün alt paltarları.
+						li Məişət-kimyası malları.
+						li Şəxsi gigiyena əşyaları (diş fırçaları, daraqlar, biqudilər və s.).
+						li Uşaq oyuncaqları.
+						li İstehsal qüsurları istisna olmaqla istifadədə olmuş, üzərində yarlıklar olmayan kişi, qadın və uşaq corabları, alt paltarları.
+						li Ərzaq üçün plastmasdan hazırlanmış məlumatlar.
+						li Dəyəri ödənilmiş və mağazadan çıxarılmış (yararlılıq müddəti ərzində) ərzaq malları.

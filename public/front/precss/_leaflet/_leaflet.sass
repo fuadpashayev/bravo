@@ -1,0 +1,404 @@
+.leaflet__col
+	+col()
+	+size(6)
+	+size-sm(10)
+	+size-xs(12)
+	+md-block()
+		margin: 0 auto 
+		margin-bottom: 20px 
+	background: rgba($data_color, .15)
+
+.leaflet-box
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	padding-top: 30px 
+	padding-bottom: 30px 
+
+.leaflet-box__time
+	+text_middle_cb 
+	color: $data_color
+
+.leaflet-box__title
+	margin-bottom: 20px 
+	+caption_small_cb
+	color: $acceptor_green
+
+.leaflet-box__img
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 256px
+	height: 355px 
+	margin-bottom: 20px 
+	img 
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		max-width: 100% 
+
+.leaflet-box__hover-btn
+	z-index: 2
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+
+.leaflet-box__hover-icon
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 44px
+	height: 44px 
+	border-radius: 50% 
+	margin-bottom: 8px 
+	background: rgba($black_light1, .7)
+	+trs 
+
+.leaflet-box__hover-text
+	padding: 7px 
+	padding-top: 3px 
+	padding-bottom: 3px 
+	+text_middle_cm 
+	color: rgba($white, .8)
+	background: rgba($black_light1, .7)
+
+.leaflet-box__link
+	display: flex
+	align-items: center
+	+text_middle_cr
+	color: $acceptor_green
+	+trs 
+	&:hover 
+		color: $acceptor_blue 
+		.leaflet-box__download-icon
+			fill: $acceptor_blue
+
+.leaflet-box__download-icon
+	width: 20px
+	height: 20px
+	margin-right: 9px 
+	fill: $acceptor_green 
+	+trs 
+	
+.leaflet-box__read-icon
+	width: 24px
+	height: 20px 
+	fill: $white 
+	+trs 
+
+
+// leaflet inner 
+.pdf-booklet 
+	width: 100% 
+	overflow: hidden
+	+xs-block()
+		overflow: visible
+		>.container-fluid 
+			overflow: visible
+	>.container-fluid 
+		position: relative
+		height: 100% 
+		overflow: hidden
+
+.pdf-booklet__col 
+	+col()
+	+size(12)
+	+xs-block()
+		width: 100%
+		margin-left: 0
+
+
+.logo-leaflet
+	+col()
+	+size(2)
+	+size-xs(2)
+	width: 117px
+	+xs-block()
+		// width: 90px 
+		img 
+			width: 60px
+			height: 55px
+	+xs_small-block()
+		width: 80px 		
+
+.pdf-total-list 
+	+col()
+	+size(2)
+	+size-xs(1)
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100% 
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 0 auto 
+	&.pdf-total-list--mobile
+		position: static 
+		display: none  
+		height: auto 
+		+xs-block()
+			display: flex
+	+xs-block()
+		display: none
+
+.pdf-controls 
+	+col()
+	+size(2)
+	position: relative
+	z-index: 1
+	display: flex
+	margin-left: auto 
+	align-items: center
+	justify-content: flex-end
+	// justify-content: space-between
+	+xs_small-block()
+		+size(9)
+		margin-right: 0
+		margin-left: 0
+	+to(400px)
+		+size(8)	
+	+to(340px)
+		+size(7.5)	
+
+.pdf-total-list__wrap
+	display: flex
+	align-items: stretch
+
+.pdf-total-list__btn 
+	display: flex
+	align-items: center
+	justify-content: center
+	padding-left: 15px 
+	padding-right: 15px 
+	+text_high_cb
+	border: none 
+	background: $acceptor_green 
+	color: $white
+	+trs 
+	cursor: pointer
+	outline: none 
+	+sm-block()
+		display: none
+	@media screen and ( max-height:  880px)
+		display: none
+	&:hover 
+		background: $acceptor_blue 
+	&.pdf-total-list__btn--zoom-out
+		margin-right: 5px
+	&.pdf-total-list__btn--zoom-in
+		margin-left: 5px
+
+.pdf-total-list__icon
+	width: 15px
+	height: 15px 
+	fill: $white 
+	+trs 
+	
+.pdf-total-list__stats
+	display: inline-block
+	padding-top: 5px 
+	padding-bottom: 5px 
+	padding-left: 22px 
+	padding-right: 22px 
+	+text_middle_cb
+	color: $white
+	background: $acceptor_green
+	+sm-block()
+		padding-right: 10px 
+		padding-left: 10px 
+	+xs-block()
+		display: flex
+		margin-top: -90px 	
+
+.pdf-controls__btn
+	display: flex 
+	flex-direction: column
+	align-items: center
+	margin-right: 20px 
+	+text_middle_cm
+	background: none 
+	border: none 
+	color: $black_light1
+	cursor: pointer
+	outline: none 
+	+trs 
+	+sm-block()
+		margin-right: 10px 
+		+text_small_cm
+	&:last-child
+		margin-right: 0
+	&:hover
+		color: $acceptor_green 
+		.pdf-controls__icon
+			fill: $acceptor_green
+		.pdf-controls__icon--quit 
+			fill: none 
+			stroke: $acceptor_green
+
+.pdf-controls__icon
+	width: 33px
+	height: 33px 
+	margin: 0 auto
+	margin-bottom: 3px 
+	fill: $black_light1
+	+trs
+	+sm-block()
+		width: 20px
+		height: 20px
+
+.pdf-controls__icon--quit
+	transform: translateX(2.5px)
+	fill: none 
+	stroke: $black_light1
+
+.pdf-progress
+	position: absolute
+	bottom: 0
+	left: 0 
+	width: 100%
+	height: 10px 
+
+.pdf-booklet-view
+	display: block
+	margin: 0 auto 
+	// min-width: 120px 
+	// max-width: 567px
+	min-height: 150px 
+	// max-height: 786px
+	// width: 100%
+	+xs-block()
+		width: 100% 
+		max-width: 100%
+	@media screen and ( max-height:  880px)
+		min-width: 120px 
+		max-width: 380px
+		min-height: 300px 
+		max-height: 600px
+	@media screen and ( max-height:  800px)
+		min-width: 120px 
+		max-width: 360px
+		min-height: 300px 
+		max-height: 550px
+	@media screen and ( max-height:  770px)
+		min-width: 120px 
+		max-width: 320px
+		min-height: 300px 
+		max-height: 500px
+	@media screen and ( max-height:  700px)
+		min-width: 120px 
+		max-width: 220px
+		min-height: 200px 
+		max-height: 400px
+	@media screen and ( max-height:  500px)
+		min-width: 120px 
+		max-width: 120px
+		min-height: 200px 
+		max-height: 200px
+	@media screen and ( max-height:  440px)
+		min-width: 100px 
+		max-width: 100px
+		min-height: 100px 
+		max-height: 150px
+
+.pdf-booklet-controls
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100% 
+
+.pdf-booklet-controls__btn 
+	position: absolute
+	top: 50% 
+	z-index: 2
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 70px
+	height: 50px
+	margin-top: -25px 
+	background: $white 
+	border: none 
+	cursor: pointer
+	+trs
+	+xs-block()
+		top: 0
+		margin-top: -70px 
+	&[disabled]
+		cursor: default
+		opacity: .4
+	&.pdf-booklet-controls__btn--prev
+		left: 0 
+		margin-left: 50px 
+	&.pdf-booklet-controls__btn--next 
+		right: 0
+		margin-right: 50px 
+	
+.pdf-booklet-controls__icon
+	width: 26px
+	height: 19px 
+	fill: rgba($data_color, .5)
+	+trs 
+
+.pdf-total-list-view
+	position: absolute
+	top: 100%
+	right: 0
+	z-index: 3
+	width: 100%
+	height: 500px
+	padding: 5px 
+	background: $white
+	+bx_shadow_cart
+
+
+.pdf-total-list-view__wrapper
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	width: 100%
+	height: 100% 
+	overflow-y: auto 
+	a 
+		display: flex
+		width: 76px
+		height:  96px 
+		margin-bottom: 10px
+		cursor: pointer
+
+
+.footer-leaflet
+	position: relative
+	min-height: 10px
+	margin-top: auto
+
+.pdf-progress
+	display: block!important
+	+trs 
+	&[value]
+		-webkit-appearance: none 
+		appearance: none
+		border: none 
+		color: $acceptor_green
+		+trs 
+
+	&[value]::-webkit-progress-bar 
+		background: $white 		
+
+	&[value]::-webkit-progress-value
+		background:  -webkit-linear-gradient(-45deg, transparent 33%, rgba($black_light1, 0.1) 33%, rgba($black_light1, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba($data_color, 0.25), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left, $acceptor_green, $acceptor_green)
+		background-size: 35px 20px, 100% 100%, 100% 100%
+		+trs 
+
+	&[value]::-moz-progress-bar
+		background:  -moz-linear-gradient(-45deg, transparent 33%, rgba($black_light1, 0.1) 33%, rgba($black_light1, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba($data_color, 0.25), rgba(0, 0, 0, 0.25)), -moz-linear-gradient(left, $acceptor_green, $acceptor_green)
+		background-size: 35px 20px, 100% 100%, 100% 100%
+		+trs 

@@ -1,0 +1,63 @@
+{
+    "navigation": {
+        "dashboard": "Dashboard",
+        "portfolio": "Portfolio",
+        "products": "Products",
+        "categories": "Categories",
+        "users": "Users",
+        "roles": "Roles",
+        "permissions": "Permissions",
+        "localization": "Localization",
+        "languages": "Languages",
+        "translation_groups": "Translation groups",
+        "translations": "Translations",
+        "settings": "Settings",
+        "config": "Configuration",
+        "site": "Site",
+        "modules": "Modules",
+        "menus": "Menus"
+    },
+    "users": {
+        "addNewInfo": "Add information"
+    },
+    "errors": {
+        "givenDataInvalid": "Given data is invalid!",
+        "youDontHavePermissionForThisPage": "You don't have permission for this operation!",
+        "noRoleAssigned": "No role assigned!"
+    },
+    "common": {
+        "deleteConfirmMessage": "Are you sure to delete this <code class=\"font-weight-bold font-size-lg\">#{type}</code> information?",
+        "deleteSelectedsConfirmMessage": "Are you sure to delete <span class=\"font-weight-bold\">#{selecteds}</span> selected datas?",
+        "delete": "Delete",
+        "deleteNItems": "Delete <span class='font-weight-bold'>#{selecteds}</span> items",
+        "filter": "Filter",
+        "typeToFilter": "search...",
+        "show": "Show",
+        "yes": "Yes",
+        "cancel": "Close",
+        "datatablesShowFromToEntries": "Showing _START_ to _END_ of _TOTAL_ entries",
+        "datatablesShowFromToEntriesEmpty": "Showing 0 to 0 of 0 entries",
+        "datatablesFilteredFromEntries": "filtered from _MAX_ total entries",
+        "datatablesNoMatching": "No matching records found!",
+        "loading": "Loading...",
+        "processing": "Processing...",
+        "datatablesNoData": "No data available in table!"
+    },
+    "options": {
+        "nothingSelected": "Nothing selected",
+        "nothingMatched": "Nothing matched <code>{0}</code>",
+        "selectedItem": "{0} item selected",
+        "selectedItems": "{0} items selected",
+        "selectRole": "Select role"
+    },
+    "breadcrumb": {
+        "addRole": "Add role",
+        "exportTranslations": "Export translations"
+    },
+    "table": {
+        "module": "Module"
+    },
+    "translations": {
+        "export": "Export"
+    }
+}

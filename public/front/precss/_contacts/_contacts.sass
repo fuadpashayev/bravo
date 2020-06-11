@@ -1,0 +1,342 @@
+.contacts-form
+	width: 100% 
+	
+.contacts-form__row
+	display: flex
+	flex-wrap: wrap 
+	margin-left: -10px 
+	margin-right: -10px 
+	&.contacts-form__row--send-btn
+		justify-content: flex-end
+		margin-top: 20px
+
+.contacts-form__col
+	+col()
+	display: flex
+	flex-direction: column
+	margin-bottom: 30px
+	&.contacts-form__col--half 
+		+size(6)
+		+size-xs(12)
+	&.contacts-form__col--full 
+		+size(12)
+	&.contacts-form__col--pined-file-title
+		margin-bottom: 15px
+	&.contacts-form__col--mt 
+		margin-top: 20px 
+
+.contacts-form__label
+	margin-bottom: 5px 
+	+text_middle_cm
+	color: $greyish3
+	&.contacts-form__label--black 
+		color: $black_light2
+	&.contacts-form__label--title  
+		+text_high_cb
+
+.contacts-form__input
+	padding-top: 16.3px 
+	padding-bottom: 16.3px  
+	padding-left: 20px 
+	padding-right: 20px 
+	+text_small_r
+	line-height: 1
+	background: $white  
+	border-radius: 5px 
+	border: 1px solid $light_grey
+	color: $acceptor_text_color
+	+bx_shadow_cart_input
+	-webkit-appearance: none 
+	-moz-appearance: none 
+	appearance: none 
+	&[type='number']
+		-moz-appearance: textfield
+	&::-webkit-outer-spin-button, 
+	&::-webkit-inner-spin-button
+		-webkit-appearance: none
+	&::placeholder 
+		+text_small_r
+		color: $data_color
+
+.contacts-form__textarea
+	height: 167px
+	padding-top: 16.3px 
+	padding-bottom: 16.3px  
+	padding-left: 20px 
+	padding-right: 20px 
+	+text_small_r
+	line-height: 1
+	background: $white  
+	border-radius: 5px 
+	border: 1px solid $light_grey
+	color: $acceptor_text_color
+	resize: none
+	+bx_shadow_cart_input
+	&::placeholder 
+		+text_small_r
+		color: $data_color
+
+.contact-form-loaded
+	position: relative
+	display: flex
+	flex-direction: column
+	// align-items: center
+	// justify-content: center
+	padding: 26px 
+	border: 1px dashed rgba($data_color, .5)
+	cursor: pointer
+	+trs 
+	&.contact-form-loaded--active 
+		border-style: solid 
+		border-color: rgba($acceptor_green, 1)
+		.contact-form-loaded__icon
+			display: none
+			&:first-child
+				display: block
+	&:hover 
+		border-color: rgba($acceptor_green, 1)
+		background: rgba($white, .2)
+		.contact-form-loaded__inner
+			color: $acceptor_green
+			.contact-form-loaded__title
+				color: $acceptor_green
+
+.contact-form-loaded__inner 
+	position: relative
+	display: flex
+	align-items: center
+	+sm-block()
+		flex-direction: column 
+		align-items: flex-start
+	+xs-block()	
+		flex-direction: row
+		align-items: center
+	.contact-form-loaded__title
+		margin-bottom: 0
+		+text_middle_cm
+		color: $black_light4
+		+trs 
+	.contact-form-loaded__descr
+		+text_middle_cm
+		color: $greyish4
+		+trs 
+
+.contact-form-loaded__icon
+	display: none
+	&:last-child
+		display: block
+
+.contact-form-loaded__icon-svg
+	width: 17px
+	height: 17px 
+	fill: $data_color
+	+trs 
+
+.contact-form-loaded__close
+	position: absolute 
+	top: 8.5px 
+	right: 8.5px
+	background: none 
+	border: none 
+	opacity: 0
+	cursor: pointer
+	pointer-events: none
+	+trs 
+	&.contact-form-loaded__close--active
+		z-index: 2
+		pointer-events: unset 
+		opacity: 1
+
+.contact-form-loaded__img
+	margin-right: 20px 
+	+sm-block()
+		margin-bottom: 10px 
+	img 
+		width: 45px
+		height: 53px 
+
+.contact-form-loaded__input
+	position: absolute
+	top: 0
+	left: 0
+	width: 100% 
+	height: 100% 
+	opacity: 0 
+	z-index: 1
+	cursor: pointer
+
+.contacts-form__send-btn
+	display: flex
+	justify-content: center
+	align-items: center
+	max-width: 260px 
+	width: 100%
+	font-size: 18px
+	margin-left: auto   
+	cursor: pointer
+	border: none 
+	+xs-block()
+		max-width: 100% 
+		margin-left: unset 
+
+.contacts-form__send-icon
+	width: 17px
+	height: 17px 
+	transform: translateY(1.5px)
+	margin-right: 12px 
+	fill: $white 
+	+trs
+
+.article-slider
+	position: relative
+
+.article-slider__slide
+	width: 100%
+	height: 350px 
+	margin-bottom: 20px
+	overflow: hidden
+	img 
+		max-width: 100% 
+		width: 100%
+		height: 100% 
+		object-fit: cover 
+
+.article-slider-navigation__btn
+	position: absolute
+	top: 50% 
+	z-index: 2
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 70px
+	height: 50px
+	margin-top: -25px 
+	background: $white 
+	border: none 
+	cursor: pointer
+	+trs
+	&.article-slider-navigation__btn--next
+		right: 0
+	&.article-slider-navigation__btn--left 
+		left: 0
+
+.contacts-info-box	
+	padding-top: 50px 
+	padding-bottom: 50px 
+	border-top: 0.5px solid rgba($data_color, .5)
+	.contacts-info-box__title 
+		margin-bottom: 20px 
+		+text_middle_b
+		color: $text_grey
+
+	.contacts-info-box__link-box 
+		display: flex
+		flex-wrap: wrap 
+
+	.contacts-info-box__link
+		display: flex
+		align-items: center 
+		margin-bottom: 30px 
+		margin-right: 100px 
+		+text_middle_r
+		color: $acceptor_green
+		+trs 
+		+xs-block()
+			margin-right: 20px
+			margin-bottom: 20px 
+		&:hover 
+			color: $acceptor_blue
+			.contacts-info-box__icon
+				fill: $acceptor_blue
+ 
+
+.contacts-info-box__icon
+	width: 24px
+	height: 24px 
+	margin-right: 10px 
+	fill: $acceptor_green
+	+trs 
+
+
+.article-slide-count
+	position: absolute
+	top: 0
+	right: 0
+	left: unset 
+	display: flex
+	z-index: 1
+	justify-content: center
+	align-items: center
+	width: 65px
+	height: 47px 
+	box-sizing: border-box 
+	padding: 16px 
+	font-size: 12px
+	background: $acceptor_green 
+	color: rgba($white, .5)
+
+	.swiper-pagination-current
+		margin-right: 3px
+		+text_high_cb
+		color: $white !important
+		+trs 
+
+	.swiper-pagination-current
+		font-size: 19px !important
+	
+	.swiper-pagination-total
+		+text_small_cr
+		color: $white !important
+		opacity: .5
+		+trs 
+
+	.swiper-pagination-total
+		margin-left: 3px
+		font-size: 12px!important 
+
+.contacts-form__checkbox-label
+	position: relative
+	display: flex
+	align-items: center
+	padding-left: 20px
+	margin-left: 15px 
+	+text_middle_cr
+	color: $text_grey
+	cursor: pointer
+	+trs 
+	&:hover 
+		color: $acceptor_green 
+	&:after 
+		content: ''
+		position: absolute
+		top: 0
+		left: -14px 
+		width: 23px
+		height: 23px 
+		margin-top: -1px
+		border: 2px solid $acceptor_green
+		border-radius: 4px 
+		+trs 
+
+.contacts-form__checkbox
+	display: none
+
+.contacts-form__checkbox:checked  ~ .contacts-form__checkbox-label
+	color: $acceptor_green 
+	&:after
+		background: $acceptor_green url(../images/main/icon/check1.svg) no-repeat center/70% 70%
+
+.contacts-form__sub-col
+	display: flex
+	flex-wrap: wrap
+	margin-top: 5px 
+
+.contacts-form__checkbox-wrap
+	margin-right: 54px 
+	margin-bottom: 25px 
+	+xs-block()
+		margin-right: 0 
+		width: 100%
+	&:last-child
+		margin-right: 0
+

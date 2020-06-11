@@ -1,0 +1,35 @@
+include ../mixins/_mixins
+
+header.header 
+	.container-fluid
+		.row
+			a(href="#").logo.logo-leaflet.preloader.preloader--v
+				img.blazy.blazy--style(src="./images/main/empty_img.png" data-src="./images/main/icon/l_vertical.svg", alt="bravo market logo") 
+			.pdf-total-list
+				.pdf-total-list__wrap.preloader.preloader--v
+					button.pdf-total-list__btn.pdf-total-list__btn--zoom-out 
+						+icon('zoom', 'pdf-total-list__icon')
+					.pdf-total-list__stats.preloader.preloader--v
+						span.pdf-total-list__number.pdf-total-list__active 0 
+						span.pdf-total-list__line / 
+						span.pdf-total-list__number.pdf-total-list__total 0
+					button.pdf-total-list__btn.pdf-total-list__btn--zoom-in 
+						+icon('multimedia', 'pdf-total-list__icon')
+			.pdf-controls 
+					//- .pdf-total-list-view.preloader.preloader--v
+					//- 	.pdf-total-list-view__wrapper 
+					//- button.preloader.preloader--v.pdf-controls__btn.pdf-controls__btn--list 
+					//- 	+icon('left', 'pdf-controls__icon pdf-controls__icon--menu') 
+					//- 	| Menu 
+					.preloader.preloader--v.pdf-controls__btn.pdf-controls__btn--print(onclick="printJS('https://webskyus.ru/bravo/media/2.pdf')")
+						+icon('interface', 'pdf-controls__icon') 
+						| Print 
+					a.preloader.preloader--v.pdf-controls__btn.pdf-controls__btn--download(href="./media/2.pdf" download)
+						+icon('multimedia-option', 'pdf-controls__icon') 
+						| Download 
+					a.preloader.preloader--v(href="#").pdf-controls__btn.pdf-controls__btn--back 
+						+icon('back', 'pdf-controls__icon pdf-controls__icon--quit')
+						| Quit 
+
+
+//- iframe.printed-content#printed-content(src="./media/2-15 aprel son variant.pdf" type="application/pdf" runat="server")

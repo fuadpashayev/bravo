@@ -1,0 +1,25 @@
+.simple-tab__link--active,
+.simple-tab__link--submenu-active
+	padding-left: 40px
+	color: $acceptor_green
+	+md-block()
+		padding-left: 0px  
+	+xs-block()
+		padding-left: 20px  
+	&::after
+		width: 35px 
+
+.simple-tab__link--active ~ .about-aside__menu-inner,
+.simple-tab__link--submenu-active ~ .about-aside__menu-inner
+	display: block
+
+
+.simple-tab__content--active
+	display: block
+	animation: fadeIn 0.7s ease-in-out
+
+.simple-tab__link--active-inner
+	color: $acceptor_green
+	&:after 
+		background: $acceptor_green !important
+	

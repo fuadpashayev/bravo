@@ -1,0 +1,34 @@
+.banner-top-slider__slide 
+	display: flex
+	height: 535px 
+	+sm-block()
+		height: 300px 
+	img 
+		max-width: 100% 
+		width: 100% 
+		height: 100% 
+		object-fit: cover 
+
+.banner-top-slider-thumb
+	+col()
+	+size(12)
+	// padding-left: 100px 
+	// padding-right: 100px 
+	margin-top: -65px 
+	.swiper-slide
+		text-align: center
+	.swiper-slide-thumb-active	
+		.banner-top-slider-thumb__title
+			border-color: $white 
+	
+.banner-top-slider-thumb__title
+	display: inline-block
+	padding-bottom: 5px 
+	+text_small_cb 
+	cursor: pointer
+	border-bottom: 3px solid rgba($white, 0)
+	color: $white 
+	+trs 
+	&:hover 
+		border-color: $acceptor_text_color
+		color: $acceptor_text_color

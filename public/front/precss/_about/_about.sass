@@ -1,0 +1,173 @@
+.about 
+	position: relative
+	display: flex
+	>.container 
+			width: 100%
+	// clear: both
+	// overflow: hidden
+
+.about-aside 
+	+col()
+	+size(4)
+	+size-lg(3)
+	+size-xs(12)
+	
+
+.about-post 
+	+col()
+	+size(8) 
+	+size-lg(9)
+	+size-xs(12)
+	margin-bottom: 70px
+	
+.about-aside__nav
+	position: sticky
+	position: -weblit-sticky
+	top: 50px
+	width: 100%
+	// bottom: 0
+
+.about-aside__menu
+	+from(960px)
+		padding-right: 90px
+	+xs-block()
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 50px 
+		// background: $white 
+	
+.about-aside__menu-inner
+	display: none
+	>.about-aside__items
+		padding-left: 80px
+		+md-block()
+			padding-left: 20px
+		> .about-aside__link 
+				+text_small_cr
+				margin-top: 4.5px
+				margin-bottom: 4.5px
+				&:hover
+					+from(960px)
+						padding-left: 0
+					&::after
+						background: $acceptor_green
+				&::after
+					width: 35px
+					left: -40px
+					background: $data_color
+
+.about-aside__items
+	margin-bottom: 5px 
+	+xs-block()
+		flex-grow: 1
+		width: auto
+		min-width: 300px
+		&:nth-child(2n)
+			.about-aside__link
+				margin-right: 0
+
+.about-aside__link
+	position: relative
+	display: flex
+	+text_middle_cb
+	color: $data_color
+	cursor: pointer
+	+trs 
+	+md-block()
+		&:hover
+			padding-left: 0px 
+		&::after
+			display: none
+	+xs-block()
+		margin-right: -0.5px 
+		margin-bottom: -1px
+		padding: 20px
+		border: 1px solid $greyish
+		background: $white
+		&:hover
+			padding-left: 20px 
+			background: rgba($greyish, .3)
+		&::after
+			display: none
+	&:hover 
+		padding-left: 40px 
+		color: $acceptor_green
+		&:after 
+			width: 35px 
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		margin-top: 10px 
+		width: 0px 
+		height: 2px 
+		background: $acceptor_green 
+		+trs 
+
+.about-post
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+		margin-bottom: 10px
+		+caption_high_cb
+		color: $black_light1
+	h3,
+	h4,
+	h5
+		font-size: 22px 
+	h6 
+		margin-bottom: 10px
+		+text_high_b 
+		font-size: 16px
+		color: $acceptor_green
+	p, 
+	span,
+	a 
+		+text_middle_r
+		color: $black_light1	
+	a 
+		color: $acceptor_blue
+		+trs 
+		&:hover 
+			color: $acceptor_green 
+	ul 
+		li 
+			position: relative
+			margin-bottom: 10px
+			padding-left: 20px 
+			+text_middle_r
+			list-style-type: none
+			color: $black_light1 
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 5px
+				height: 5px
+				margin-top: 10px 
+				border-radius: 5px
+				border-radius: 50%
+				background: $black_light1
+	ol 
+		padding-left: 15px
+		li
+			padding-left: 0
+			margin-bottom: 35px 
+			list-style-type: decimal 
+			+text_middle_r
+
+.about-post__col
+	width: 100%
+	width: 100%
+	display: none
+	background:	$bg_body
+	+from(640px)
+		// min-width: 580px
+		min-height: 700px 
+	+xs-block()
+		min-width: 100% 
+		width: 100%	

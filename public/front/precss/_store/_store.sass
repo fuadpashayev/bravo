@@ -1,0 +1,216 @@
+.store-find__col-nav
+	+col()
+	+size(4)
+	+size-md(5)
+	+size-sm(12)
+	+sm-block()
+		margin-bottom: 30px 
+
+.store-find__col-map
+	+col()
+	+size(8)
+	+size-md(7)
+	+size-sm(12)
+
+.store-find__map
+	width: 100%
+	height: 640px 
+	iframe 
+		height: 100% 
+		width: 100% 
+
+.store-find-collection
+	height: 567px 
+	padding-right: 10px
+	overflow-y: auto
+
+.store-find-collection__row
+	padding-bottom: 30px 
+	margin-bottom: 30px 
+	border-bottom: 0.5px solid rgba($data_color, .5)
+	&.store-find-collection__row--fxd-row
+		display: flex
+		align-items: baseline
+		flex-wrap: wrap
+		padding-bottom: 0 
+		margin-bottom: 24px 
+		border: none 
+
+.store-find__caption
+	flex-grow: 1
+	+caption_high_cb
+	color: $black_light1
+
+.store-find__current-loc-search
+	// margin-left: auto 
+	padding: 0
+	+text_middle_cb 
+	background: none 
+	border: none 
+	cursor: pointer
+	color: $acceptor_green
+	+trs 
+	&:hover 
+		color: $blue
+
+.store-find-form
+	display: flex
+	align-items: center
+	width: 100%
+	margin-bottom: 26px 
+
+.store-find-form
+	img 
+		width: 28px
+		height: 28px
+		margin-right: 15px
+
+.store-find-form__search
+	flex-grow: 1
+	padding-bottom: 10px 
+	padding-top: 10px 
+	+text_middle_r
+	color: $black_light1
+	background: none 
+	border: none 
+	border-bottom: 0.5px solid rgba($data_color, .5)
+	&:placeholder 
+		+text_middle_r
+		color: $data_color
+
+.store-find-collection__address
+	+text_middle_r
+	color: $black_light1 
+
+.store-find-collection__title
+	margin-bottom: 5px 
+	+text_high_cb 
+	color: $black_light1 
+
+.store-find-collection__status-box-row
+	display: flex
+	flex-direction: column
+	&.store-find-collection__status-box-row--fxd-row
+		flex-direction: row
+		// justify-content: space-between
+		align-items: flex-start
+		width: 100%
+		margin-bottom: 30px 
+
+.store-find-collection__shedule
+	margin-right: 10px
+	+text_middle_r
+	color: $black_light1
+	+trs 
+	&.store-find-collection__shedule--bold 
+		min-width: 70px
+		max-width: 70px
+		+text_middle_cb
+	&.store-find-collection__shedule--link
+		&:hover 
+			color: $acceptor_green
+
+
+.store-find-collection__status-box 
+	display: flex
+	align-items: center 
+	justify-content: space-between
+	margin-top: 34px 
+	&.store-find-collection__status-box--fxd-column 
+		flex-direction: column
+
+.store-find-collection__info
+	display: flex
+	align-items: center
+	+text_high_cr
+	color: $acceptor_blue
+	+trs 
+	&.store-find-collection__info--work-info 
+		font-size: 16px 
+		margin-left: auto 
+		+to(1150px)
+			display: none
+	&.store-find-collection__info--middle
+		font-size: 16px 
+	&.store-find-collection__info--opened
+		color: $acceptor_green
+		.store-find-collection__info-svg
+			fill: $acceptor_green
+	&.store-find-collection__info--closed
+		color: $acceptor_red
+		.store-find-collection__info-svg
+			fill: $acceptor_red
+	&.store-find-collection__info--link 
+		&:hover 
+			color: $acceptor_green
+			.store-find-collection__info-svg
+				fill: $acceptor_green
+
+.store-find-collection__wrap 
+	display: flex
+	align-items: flex-end
+	justify-content: space-between
+	+md-block()
+		flex-direction: column 
+		// justify-content: flex-start
+		align-items: flex-start
+	.store-find-collection__address
+		max-width: 180px 
+		+md-block()
+			max-width: 100% 
+
+.store-find-collection__info-svg
+	width: 17px
+	height: 17px
+	margin-right: 7px  
+	fill: $acceptor_blue
+
+.store-find-collection__route-btn 
+	display: flex
+	align-items: center
+	padding-left: 20px 
+	padding-right: 20px 
+	padding-top: 5px 
+	padding-bottom: 5px 
+	+text_small_cb
+	border-radius: 28px 
+	color: $white
+	border: none 
+	background: $acceptor_green 
+	cursor: pointer
+	+md-block()
+		margin-top: 10px 
+
+.store-find-collection__route-icon 
+	width: 15px 
+	height: 15px 
+	margin-right: 5px 
+	fill: $white 
+	+trs 
+
+.store-find-collection__back-btn
+	display: flex
+	align-items: center
+	justify-content: center
+	padding-left: 50px 
+	padding-right: 50px 
+	padding-top: 10px 
+	padding-bottom: 10px 
+	border-radius: 5px 
+	border: 1px solid $data_color
+	+text_high_cr
+	color: $data_color
+	+trs 
+	&:hover 
+		background: $data_color 
+		color: $white 
+		.store-find-collection__back-btn-icon
+			fill: $white  
+
+.store-find-collection__back-btn-icon 
+	width: 6px
+	height: 10px 
+	margin-right: 10px 
+	fill: $data_color
+	transform: rotate(180deg)
+	+trs 

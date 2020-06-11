@@ -1,0 +1,47 @@
+.careers__col-content
+	+col()
+	+size(5)
+	+size-xs(12)
+	padding-right: 40px 
+	padding-top: 78px 
+	padding-bottom: 78px 
+	&.careers__col-content--right
+		padding-right: 10px
+		padding-left: 30px
+		+xs-block()
+			padding-right: 0 
+			padding-left: 0 
+	+xs-block()
+		padding-top: 30px 
+		padding-bottom: 30px 
+		padding-right: 0
+
+.careers__col-img
+	+col()
+	+size(7)
+	+size-xs(12)
+	+xs-block()
+		display: none
+	position: relative
+
+.careers__img
+	// max-width: 100% 	
+	width: calc(100% + 38px)
+	height: 100% 
+	// max-height: 355px
+	// margin-bottom: -5px
+	margin-left: -4px
+	object-fit: cover 
+	&.careers__img--right
+		margin-left: -35px 
+
+.careers__title
+	margin-bottom: 17px 
+	+caption_high_cb 
+	color: $white 
+
+.careers__descr 
+	margin-bottom: 11px 
+	+text_high_cr  
+	letter-spacing: 0.03em
+	color: $white 

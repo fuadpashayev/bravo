@@ -1,0 +1,70 @@
+// animation 
+@keyframes fadeIn
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes fadeOut
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+
+
+@keyframes flipInX
+	0%
+		transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
+		transition-timing-function: ease-in
+		opacity: 0
+	40%
+		transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
+		transition-timing-function: ease-in			
+	60%
+		transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+		opacity: 1	
+	80% 
+		transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+	100% 
+		transform: perspective(400px)		
+
+@keyframes flipOutX
+	0%
+		transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
+	30%
+		transform: perspective(400px) rotate3d(1, 0, 0, 90deg)		
+		opacity: 1
+	100%
+		transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+		opacity: 0
+
+@keyframes bounceOut
+	20%
+		transform: scale3d(.9, .9, .9)
+	50%, 55%
+		transform: scale3d(1.1, 1.1, 1.1)		
+		opacity: 1
+	100%
+		transform: scale3d(.3, .3, .3)
+		opacity: 0		
+
+@keyframes bounceIn
+	0%
+		transform: scale3d(.3, .3, .3)
+		opacity: 0		
+	20%
+		transform: scale3d(1.1, 1.1, 1.1)		
+	40%
+		transform: scale3d(.9, .9, .9)
+		opacity: 1
+	60%
+		transform: scale3d(1.03, 1.03, 1.03)
+	80%
+		transform: scale3d(.97, .97, .97)
+	100%
+		transform: scale3d(1, 1, 1)
+
+
+
+		
+		

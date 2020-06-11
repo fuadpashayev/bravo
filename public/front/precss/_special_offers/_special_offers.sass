@@ -1,0 +1,125 @@
+.offers-tab__col
+	+col()
+	+size(10)
+	+size-md(12)
+	&:last-child
+		// background: $white 
+
+.offers-tab__content
+	display: none
+	width: max-content
+	padding: 11px 
+	padding-bottom: 1px
+	+bx_shadow_big
+	background: $white 
+	+md-block()
+		width: 100%
+
+.offers-tab-slider
+	width: 100%
+	display: flex
+	.swiper-slide 
+		max-width: 160px 
+		margin-right: 10px 
+		height: 100% 
+		&:last-child
+			margin-right: 0
+
+.offers-tab__menu
+	display: flex
+	
+.offers-tab__items.simple-tab__link--active
+	padding-left: 0
+	&.offers-tab__items
+		position: relative
+		z-index: 1
+		background: $white 
+	.offers-tab__link	
+		+text_middle_cb
+		color: $acceptor_green
+	
+.offers-tab__items
+	display: flex
+	margin-bottom: -11px 
+	margin-right: 20px 
+	background: $greyish1 
+	+bx_shadow_tabs
+	cursor: pointer
+	+trs 
+	&:hover 
+		background: $white 
+	&:last-child
+		margin-right: 0
+
+.offers-tab__link
+	display: flex
+	padding: 21px 
+	padding-left: 16px 
+	padding-right: 16px 
+	width: 100% 
+	height: 100% 
+	box-sizing: border-box 
+	+text_middle_cr
+	+trs 
+	color: $black_light3
+
+.offers-tab-slider__img
+	width: 160px
+	height: 120px 
+	overflow: hidden
+	img 
+		width: 100%
+		max-width: 100% 
+		height: 100% 
+		object-fit: cover 
+
+.offers-tab-slider__descr
+	padding: 10px 
+	padding-top: 7px 
+	background: $greyish2
+
+.offers-tab-slider__link
+	display: flex
+	flex-direction: column
+	width: 160px
+	height: 100% 
+	margin-right: 10px 
+	margin-bottom: 10px 
+	+trs 
+	&:last-child
+		margin-right: 0
+	&:hover 
+		.offers-tab-slider__title
+			color: $acceptor_blue 
+
+.offers-tab-slider__time
+	display: block
+	margin-bottom: 8px 
+	+text_small_cb 
+	color: $black_light3 
+
+.offers-tab-slider__title
+	min-height: 54px 
+	+text_high_cr 
+	color: $black_light1
+	+trs 
+
+
+.offers-tab-content
+	display: flex
+	&.offers-tab-content--scrolled 
+		overflow: hidden
+		overflow-x: auto
+		max-width: 1000px 
+		+md-block()
+			max-width: 800px
+		+sm-block()
+			max-width: 600px
+		+xs-block()
+			max-width: 400px
+
+
+.offers-banner__col
+	margin-bottom: 50px
+	+xs-block()
+		min-width: 367px

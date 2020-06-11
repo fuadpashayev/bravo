@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bravo Market</title>
+    <meta content="" name="webskyus">
+    <meta content="" name="this is description">
+    <meta content="" name="website, landing">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="./images/main/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="./images/main/favicon/apple-icon-180x180.png">
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+
+<body>
+    <div class="body-wrapper body-wrapper--full-height">
+        <header class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <a class="logo logo-leaflet preloader preloader--v" href="#">
+                        <img class="blazy blazy--style" src="./images/main/empty_img.png" data-src="./images/main/icon/l_vertical.svg" alt="bravo market logo">
+                    </a>
+                    <div class="pdf-total-list">
+                        <div class="pdf-total-list__wrap preloader preloader--v">
+                            <button class="pdf-total-list__btn pdf-total-list__btn--zoom-out">
+                                <svg class="icon icon-zoom pdf-total-list__icon">
+                                    <use xlink:href="./images/sprite/sprite.svg#zoom"></use>
+                                </svg>
+                            </button>
+                            <div class="pdf-total-list__stats preloader preloader--v">
+                                <span class="pdf-total-list__number pdf-total-list__active">0 </span>
+                                <span class="pdf-total-list__line">/ </span>
+                                <span class="pdf-total-list__number pdf-total-list__total">0</span>
+                            </div>
+                            <button class="pdf-total-list__btn pdf-total-list__btn--zoom-in">
+                                <svg class="icon icon-multimedia pdf-total-list__icon">
+                                    <use xlink:href="./images/sprite/sprite.svg#multimedia"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pdf-controls">
+                        <div class="preloader preloader--v pdf-controls__btn pdf-controls__btn--print" onclick="printJS('https://webskyus.ru/bravo/media/2.pdf')">
+                            <svg class="icon icon-interface pdf-controls__icon">
+                                <use xlink:href="./images/sprite/sprite.svg#interface"></use>
+                            </svg>Print
+                        </div>
+                        <a class="preloader preloader--v pdf-controls__btn pdf-controls__btn--download" href="./media/2.pdf" download>
+                            <svg class="icon icon-multimedia-option pdf-controls__icon">
+                                <use xlink:href="./images/sprite/sprite.svg#multimedia-option"></use>
+                            </svg>Download </a>
+                        <a class="preloader preloader--v pdf-controls__btn pdf-controls__btn--back" href="#">
+                            <svg class="icon icon-back pdf-controls__icon pdf-controls__icon--quit">
+                                <use xlink:href="./images/sprite/sprite.svg#back"></use>
+                            </svg>Quit </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main -->
+        <main class="main">
+            <section class="pdf-booklet prealoder-pdf">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="pdf-booklet__col">
+                            <div class="pdf-booklet-controls">
+                                <button class="preloader preloader--v pdf-booklet-controls__btn pdf-booklet-controls__btn--prev" disabled>
+                                    <svg class="icon icon-left_arr pdf-booklet-controls__icon">
+                                        <use xlink:href="./images/sprite/sprite.svg#left_arr"></use>
+                                    </svg>
+                                </button>
+                                <input class="pdf-booklet-controls__current" value="1" type="hidden">
+                                <div class="pdf-total-list pdf-total-list--mobile">
+                                    <div class="pdf-total-list__stats preloader preloader--v">
+                                        <span class="pdf-total-list__number pdf-total-list__active-mobile">0 </span>
+                                        <span class="pdf-total-list__line">/ </span>
+                                        <span class="pdf-total-list__number pdf-total-list__total-mobile">0</span>
+                                    </div>
+                                </div>
+                                <button class="preloader preloader--v pdf-booklet-controls__btn pdf-booklet-controls__btn--next">
+                                    <svg class="icon icon-right_arr pdf-booklet-controls__icon">
+                                        <use xlink:href="./images/sprite/sprite.svg#right_arr"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <canvas class="pdf-booklet-view" data-pdf-src="./media/2.pdf"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer-leaflet">
+            <progress class="pdf-progress pdf-progress--leaflet" value="1" max="11"></progress>
+        </footer>
+    </div>
+    <script src="js/pdf/pdf.min.js" defer></script>
+    <script src="js/pdf/pdf.worker.min.js" defer></script>
+    <script src="js/pdf/print.min.js" defer></script>
+    <script src="js/main.min.js" defer></script>
+</body>
+
+</html>

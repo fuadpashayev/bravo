@@ -1,0 +1,55 @@
+section.store-find.section--mb
+	.container 	
+		.row.row--align-center 
+			.store-find__col-nav
+				.store-find-collection
+					.store-find-collection__row.store-find-collection__row--fxd-row
+						h2.preloader.preloader--v.store-find__caption Find stores
+						button.preloader.preloader--v.store-find__current-loc-search Use current location
+					.store-find-collection__row.store-find-collection__row--fxd-row
+						form.store-find-form 
+							img.blazy.blazy--style(src="./" data-src="./images/main/icon/find.svg", alt="bravo market")
+							input.preloader.preloader--v.store-find-form__search(type="search", name="store-find-form-search" placeholder="find a stores by adress") 
+					.store-find-collection__row 
+						h2.preloader.preloader--v.store-find-collection__title Bravo Supermarket
+						.store-find-collection__wrap 
+							p.preloader.preloader--v.store-find-collection__address Near “KOROĞLU” m/s Baku, 1010, Azerbaijan
+							a(href="https://www.google.com/maps?saddr=Current+Location&daddr=bravo+supermarket+near+Koroğlu+Parkı,+Mirali+Gashgai,+Baku" target="_blank").preloader.preloader--v.store-find-collection__route-btn 
+								+icon('route', 'store-find-collection__route-icon')
+								| Route
+						.store-find-collection__status-box.store-find-collection__status-box--fxd-column 
+							.store-find-collection__status-box-row.store-find-collection__status-box-row--fxd-row
+								p.preloader.preloader--v.store-find-collection__shedule.store-find-collection__shedule--bold
+									| Today
+								p.preloader.preloader--v.store-find-collection__shedule
+									| 9:00 am –  11:00 pm
+								p.preloader.preloader--v.store-find-collection__info.store-find-collection__info--work-info.store-find-collection__info--closed
+									+icon('closed', 'store-find-collection__info-svg')
+									| Closed now 
+							.store-find-collection__status-box-row.store-find-collection__status-box-row--fxd-row
+								p.preloader.preloader--v.store-find-collection__shedule.store-find-collection__shedule--bold
+									| Weekly
+								p.preloader.preloader--v.store-find-collection__shedule
+									| Monday - Sunday
+									br 
+									| 9:00 am –  11:00 pm
+							.store-find-collection__status-box-row.store-find-collection__status-box-row--fxd-row
+								p.preloader.preloader--v.store-find-collection__shedule.store-find-collection__shedule--bold
+									| Phone
+								a(href="tel:4041378").preloader.preloader--v.store-find-collection__shedule.store-find-collection__shedule--link
+									| 404 13 78
+							.store-find-collection__status-box-row.store-find-collection__status-box-row--fxd-row
+								a(href="#").preloader.preloader--v.store-find-collection__info.store-find-collection__info--middle.store-find-collection__info--link
+									+icon('info', 'store-find-collection__info-svg')
+									| Need more information?
+							.store-find-collection__status-box-row.store-find-collection__status-box-row--fxd-row
+								a(href="#").preloader.preloader--v.store-find-collection__back-btn
+									+icon('arrow', 'store-find-collection__back-btn-icon')
+									| Back  
+			
+			.store-find__col-map
+				#map1.store-find__map
+
+
+
+

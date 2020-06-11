@@ -1,0 +1,53 @@
+.breadcrumbs
+	// position: relative
+
+.breadcrumbs_col
+	+col()
+	+size(12)
+	position: relative
+
+.breadcrumbs__nav
+	position: absolute
+	z-index: 4
+	left: 0px
+	top: 35px 
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	
+.breadcrumbs__icon
+	width: 14px 
+	height: 14px 
+	fill: $white 
+	+trs 
+	&.breadcrumbs__icon--arrow
+		width: 12px
+		height: 12px 
+		margin-left: 5px 
+		margin-right: 5px 
+		fill: $white 
+
+.breadcrumbs__item
+	display: flex
+	align-items: center
+	+text_middle_cr
+	color: $white 
+	+trs 
+	&.breadcrumbs__item--grey-color 
+		color: $data_color 
+		.breadcrumbs__icon
+			fill: $data_color
+		&.breadcrumbs__item--inactive 
+			&:hover 
+				color: $data_color
+				.breadcrumbs__icon
+					fill: $data_color
+	&.breadcrumbs__item--inactive 
+		&:hover 
+			color: $white
+			.breadcrumbs__icon
+				fill: $white
+	&:hover 
+		color: $acceptor_blue
+		.breadcrumbs__icon
+			fill: $acceptor_blue

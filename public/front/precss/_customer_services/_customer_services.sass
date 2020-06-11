@@ -1,0 +1,119 @@
+
+.accordion__descr
+	display: flex
+	align-items: center
+	cursor: pointer
+	+trs 
+	&.accordion__descr--top
+		padding-top: 30px 
+		padding-bottom: 30px 
+		border-bottom: 1px solid rgba($data_color, .3)
+		+text_high_cb
+		color: $black_light1
+		&.accordion__descr--active 
+			+text_high_cb
+			color: $acceptor_green
+			&:hover 
+				color: $acceptor_blue
+				.accordion__arrow
+					fill: $acceptor_blue
+		&:hover 
+			color: $acceptor_blue
+			.accordion__arrow
+				fill: $acceptor_blue
+	&.accordion__descr--inner-title
+		margin-left: 20px
+		margin-bottom: 0
+		+text_middle_cb
+		color: $data_color  
+		+md-block()
+			margin-left: 0
+	&.accordion__descr--active 
+		color: $black_light1
+		.accordion__arrow
+			transform: rotate(90deg)
+			&.accordion__arrow--top 
+				transform: rotate(-90deg)
+		&:hover 
+			color: $acceptor_blue
+			.accordion__arrow
+				fill: $acceptor_blue
+
+
+.accordion__text
+	display: none
+	padding-left: 80px 
+	+text_small_r
+	color: $black_light4
+	animation: fadeIn 0.7s ease-in-out
+	+md-block()
+		padding-left: 30px
+	&.accordion__text--inner 
+		position: relative
+		margin-top: 20px 
+		+md-block()
+			margin-top: 5px
+			&::after
+				display: none
+		&:after 
+			content: ''
+			position: absolute
+			top: 10px
+			left: 23px
+			width: 35px
+			height: 2px
+			margin-top: -1px  
+			background: $acceptor_green 
+	&.accordion__text--counted-list
+		li 
+			margin-left: 10px 
+			list-style: decimal
+			+text_middle_r
+	&.accordion__text--list
+		li 
+			position: relative
+			z-index: 1
+			margin-left: 10px 
+			+text_middle_r
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0 
+				z-index: -1
+				width: 5px
+				height: 5px 
+				margin-top: 10px 
+				margin-left: -15px
+				border-radius: 50% 
+				background: $black_light1
+
+.accordion__arrow
+	width: 21px
+	height: 17px 
+	margin-right: 10px 
+	fill: $acceptor_green
+	+trs 
+	// transform: rotate(90deg)
+	&.accordion__arrow--top 
+		transform: rotate(90deg)
+
+.accordion__inner-wrap
+	display: none
+	margin-top: 30px
+	animation: fadeIn 0.7s ease-in-out
+
+.accordion__inner 
+	padding: 30px 
+	margin-bottom: 30px 
+	background: $white 
+	border-radius: 3px 
+	+bx_shadow_cart
+	+md-block()
+		padding: 15px 
+		
+.accordion-visible
+	display: block
+	animation: fadeIn 0.7s ease-in-out
+
+

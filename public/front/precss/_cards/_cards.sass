@@ -1,0 +1,78 @@
+.cards-section__col 
+	+col()
+	+size(12)
+	margin-bottom: 50px 
+
+.cards-section__img
+	+col()
+	+size(5)
+	+size-md(5)
+	+size-sm(7)
+	+size-xs(12)
+	display: flex
+	justify-content: center
+	align-items: center
+	max-width: 445px
+	height: 438px
+	// padding-top: 28px 
+	// padding-bottom: 28px 
+	// padding-left: 25px 
+	// padding-right: 25px 
+	margin-right: 23px 
+	box-sizing: border-box 
+	background: rgba($data_color, .1)
+	+md-block()
+		max-width: 100%
+		height: auto 
+		padding: 40px
+		img 
+			max-width: 100% 
+			max-height: auto 
+	img 
+		max-width: 382px 
+		max-height: 382px 
+			height: auto 
+			width: auto 
+		
+.cards-section__content 
+	+col()
+	+size(6)
+	+size-md(12)
+	padding-top: 110px
+	+md-block()
+		padding-top: 10px
+
+.cards-section__title
+	margin-bottom: 23px
+	+caption_high_cb
+	color: $black_light1 
+
+.cards-section__descr 
+	margin-bottom: 30px 
+	height: 96px 
+	overflow: hidden
+	+text_middle_r 
+	color: $black 
+	&.cards-section__descr--full-view
+		height: auto 
+
+.cards-section__button
+	+text_high_cb
+	background: none 
+	border: none 
+	color: $acceptor_green
+	+trs 
+	cursor: pointer
+	outline: none
+	.cards-section__btn-text 
+		&:last-child
+			display: none
+	&.cards-section__button--active 
+		.cards-section__btn-text 
+			&:first-child
+				display: none
+			&:last-child
+				display: block
+	&:hover 
+		color: $acceptor_blue
+
